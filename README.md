@@ -1,2 +1,2 @@
 # Algo
-This repository contains important problem solutions from leetcode
+This repository contains important problem solutions from leetcode and codechef
