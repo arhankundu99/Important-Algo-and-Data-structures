@@ -1,2 +1,2 @@
-# Algo
-This repository contains important problem solutions from leetcode and codechef
+# Competetive Coding
+This repository contains important problem solutions from leetcode, codechef and Interviewbit
