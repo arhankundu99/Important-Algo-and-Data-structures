@@ -7,6 +7,10 @@ Given an integer n and an integer array ranges of length n + 1 where ranges[i] (
 Return the minimum number of taps that should be open to water the whole garden, If the garden cannot be watered return -1.
 */
 
+
+// Idea: for every tap, we have a range for that tap. We just have to merge the intervals until we get the interval (0, n)
+// Therefore this problem reduces to finding minimum number of merges of intervals to get interval (0,n)
+// Time complexity O(nlogn)
 class Solution {
     int[]dp;
     public int minTaps(int n, int[] ranges) {
@@ -36,8 +40,7 @@ class Solution {
     }
     public int dfs(int[][]intervals, int idx)
     {
-        int prev = intervals[idx-1][1];
-        if(prev == intervals.length-1)return 0;
+        if(intervals[idx][1] == intervals.length-1)return 0;
         if(idx == intervals.length)return Integer.MAX_VALUE;
         
         if(dp[idx]!=-1)return dp[idx];
