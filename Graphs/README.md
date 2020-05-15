@@ -1,5 +1,5 @@
 ## Graphs
 
-More Problems: \
-<https://www.geeksforgeeks.org/check-loop-array-according-given-constraints/>
-<https://www.geeksforgeeks.org/detect-cycle-in-a-graph/>
+More Problems: <br />
+<https://www.geeksforgeeks.org/check-loop-array-according-given-constraints/> <br />
+<https://www.geeksforgeeks.org/detect-cycle-in-a-graph/> <br />
