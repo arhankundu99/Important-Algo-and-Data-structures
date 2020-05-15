@@ -14,3 +14,4 @@ The Disadvantage is that tries require a lot of memory
 One of the main application of tries is the auto completion of a query in the google search bar.
 
 For very efficient string matching algorithm, refer this: <https://www.geeksforgeeks.org/aho-corasick-algorithm-pattern-searching/>
+For more information on tries refer this: <https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/535/week-2-may-8th-may-14th/3329/>
