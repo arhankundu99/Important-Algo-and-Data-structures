@@ -7,7 +7,7 @@ void update(int idx, int val)
     while (idx <= N){
        BIT[idx] += val;
        idx += idx & (-idx);    // move to the idx whose range contains idx
-       // or idx += (~idx)+1;  // ~(idx) flips 1 to 0 and 0 to 1
+       // or idx += idx&((~idx)+1);  // ~(idx) flips 1 to 0 and 0 to 1
     } 
 }
 void build()
@@ -24,7 +24,7 @@ int sum(int idx)   // this function returns sum from i = 0 to i = idx
     while (idx>0) 
     {
         sum += BIT[idx]; 
-        idx -= idx & (-idx);  // move to parent idx
+        idx -= idx += idx&((~idx)+1);  // move to parent idx
     } 
     return sum;
 }
