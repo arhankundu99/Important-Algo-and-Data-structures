@@ -64,7 +64,7 @@ class Solution {
                 visited[u-1]=true;
                 dist[u-1]=dist[u]+1;
             }
-            
+            map.get(arr[u]).clear() // very important
         }
     }
 }
