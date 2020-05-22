@@ -4,3 +4,4 @@
 <https://www.hackerearth.com/practice/notes/binary-indexed-tree-or-fenwick-tree/#c217533> <br />
 <https://medium.com/@adityakumar_98609/fenwick-tree-binary-index-tree-aca7824d9c2a> <br />
 <https://www.hackerearth.com/practice/data-structures/advanced-data-structures/segment-trees/tutorial/> <br />
+<https://cp-algorithms.com/data_structures/segment_tree.html> <br />
