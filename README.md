@@ -1,2 +1,2 @@
 # Competetive Coding
-This repository contains important problem solutions from leetcode, codechef, Interviewbit and Hackerearth.
+This repository MY solutions from leetcode, codechef, Interviewbit and Hackerearth.
