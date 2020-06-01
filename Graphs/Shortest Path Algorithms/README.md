@@ -35,4 +35,33 @@ Time complexity : O(V^3)
  
  Initially `dist[i][i] = 0`. The path [i...k...i] can improve only if there exists a negative cycle. <br />
  So after the algorithm, `dist[i][i] will be negative` if a negative cycle exists from i to i <br />
+ 
+ ### Reconstruction of shortest paths
+ 
+ Below is the pseudo code for reconstruction of paths
+ 
+```
+procedure FloydWarshallWithPathReconstruction() is
+    for each edge (u, v) do
+        dist[u][v] ← w(u, v)  // The weight of the edge (u, v)
+        next[u][v] ← v
+    for each vertex v do
+        dist[v][v] ← 0
+        next[v][v] ← v
+    for k from 1 to |V| do // standard Floyd-Warshall implementation
+        for i from 1 to |V|
+            for j from 1 to |V|
+                if dist[i][j] > dist[i][k] + dist[k][j] then
+                    dist[i][j] ← dist[i][k] + dist[k][j]
+                    next[i][j] ← next[i][k]
+   
+procedure Path(u, v)
+    if next[u][v] = null then
+        return []
+    path = [u]
+    while u ≠ v
+        u ← next[u][v]
+        path.append(u)
+    return path
+```
   
