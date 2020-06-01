@@ -31,7 +31,7 @@ Time complexity : O(V^3)
 ### Behaviour with negative cycles
 
  There is no shortest path between any pair of vertices i, j which form part of a negative cycle. <br />
- But This algorithm can be used to detect negative cycles in a graph. < br />
+ But This algorithm can be used to detect negative cycles in a graph. <br />
  
  Initially `dist[i][i] = 0`. The path [i...k...i] can improve only if there exists a negative cycle. <br />
  So after the algorithm, `dist[i][i] will be negative` if a negative cycle exists from i to i <br />
