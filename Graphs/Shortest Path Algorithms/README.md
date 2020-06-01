@@ -1,6 +1,7 @@
 # Floyd Warshall Algorithm
 
 This algorithm is used to find shortest distances between all nodes in a graph. (This algorithm also works for negative edges) <br />
+This algorithm is an example of dynamic programming.
 
 ## Java Code:
 
