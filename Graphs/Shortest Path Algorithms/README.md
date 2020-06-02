@@ -69,4 +69,54 @@ Some practice problems:
 
 <https://leetcode.com/problems/network-delay-time/submissions/>
 
+# Bellman-Ford Algorithm
+
+Based on Dynamic Programming. <br/>
+
+Below is the pseudo code:
+
+```
+function BellmanFord(list vertices, list edges, vertex source) is
+    ::distance[], predecessor[]
+
+    // This implementation takes in a graph, represented as
+    // lists of vertices and edges, and fills two arrays
+    // (distance and predecessor) about the shortest path
+    // from the source to each vertex
+
+    // Step 1: initialize graph
+    for each vertex v in vertices do
+        distance[v] := inf             // Initialize the distance to all vertices to infinity
+        predecessor[v] := null         // And having a null predecessor
+    
+    distance[source] := 0              // The distance from the source to itself is, of course, zero
+
+    // Step 2: relax edges repeatedly
+    for i from 1 to size(vertices)−1 do //just |V|−1 repetitions; i is never referenced
+        for each edge (u, v) with weight w in edges do
+            if distance[u] + w < distance[v] then
+                distance[v] := distance[u] + w
+                predecessor[v] := u
+
+    // Step 3: check for negative-weight cycles
+    for each edge (u, v) with weight w in edges do
+        if distance[u] + w < distance[v] then
+            error "Graph contains a negative-weight cycle"
+
+    return distance[], predecessor[]
+```
+We can also use bellman-ford algorithm to find all pair shortest paths and the time complexity will be O(V*V*E) (In the worst case the time complexity is O(V^4).
+
+### Why are we iterating |V|-1 times?
+
+The reason is the any shortest path between two edges has atmost |V|-1 times. If it has more than |V|-1 edges, then the graph contains a negative cycle. <br/>
+
+Time Complexity: O(VE)  <br />
+Best Case : O(E)
+
+### Advantages over dijkstra's algo
+
+It can be used in case of negative edge weigths and it can also be used to detect cycle in a graph.
+
+
   
