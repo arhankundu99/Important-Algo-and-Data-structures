@@ -27,3 +27,10 @@ class Solution {
         return true;
     }
 }
+
+// we select the starting node of graph and color it. We then move to the nodes directly connected to the selected node and
+// start coloring the node with the color opposite to the parent node. We repeat this process and if we encounter a node which has
+// different color than it was supposed to be, then the graph cannot be bipartite.
+
+// Time complexity: O(V+E) because we are traversing adjacency list only
+// Auxilary Space complexity: O(V)
