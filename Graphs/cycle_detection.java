@@ -25,3 +25,11 @@ class DetectCycle
         return false;
     }
 }
+
+// why this works?
+// we are storing the nodes in rec which are currently in recursion stack
+// so if we find an element which was already present in the rec array, then we have detected a cycle
+// now if we encounter an element which we have already visited, then a cycle is not possible 
+
+// Time complexity: O(V+E) because we are ultimately traversing the adjacency list only.
+// Extra auxilary space: O(V)
