@@ -1,3 +1,6 @@
+//Given n, how many structurally unique BST's (binary search trees) that store values 1 ... n?
+//leetcode 96 medium
+
 class Solution {
     public int numTrees(int n) {
         int[] catalan = new int[n+1];
