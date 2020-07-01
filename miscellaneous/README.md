@@ -1,4 +1,4 @@
-#### H4 nth palindrome of k digits:
+#### nth palindrome of k digits:
 half num = (n-1) + 10^(k) if k is odd <br>
          = (n-1) + 10^(k-1) otherwise <br>
    
