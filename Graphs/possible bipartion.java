@@ -34,3 +34,29 @@ class Solution {
 
 // Time complexity: O(V+E) because we are traversing adjacency list only
 // Auxilary Space complexity: O(V)
+
+//https://practice.geeksforgeeks.org/problems/bipartite-graph/1
+class GfG
+{
+	boolean isBipartite(int G[][],int V)
+    {
+        for(int i = 0; i < V; i++)
+        {
+            int[]color = new int[V];
+            Arrays.fill(color, -1);
+            if(!colorG(G, i, color, 1))return false;
+        }
+        return true;
+    }
+    boolean colorG(int[][]G, int idx, int[]color, int c){
+        if(color[idx] != -1 && color[idx] == 1-c)return false;
+        
+        color[idx] = c;
+        
+        for(int i = 0; i < G[idx].length; i++){
+            if(G[idx][i] == 0 || color[i] == 1-c)continue;
+            if(!colorG(G, i, color, 1-c))return false;
+        }
+        return true;
+    }
+}
