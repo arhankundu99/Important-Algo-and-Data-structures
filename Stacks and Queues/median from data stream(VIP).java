@@ -26,7 +26,8 @@ class MedianFinder {
         return minHeap.peek();
     }
 }
-
+// Please look into the below picture for pictorial Explanation.
+//https://www.programcreek.com/wp-content/uploads/2015/01/Find-Median-from-Data-Stream-730x408.png
 /**
  * Your MedianFinder object will be instantiated and called as such:
  * MedianFinder obj = new MedianFinder();
