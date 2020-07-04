@@ -38,7 +38,7 @@ class Solution {
 //https://practice.geeksforgeeks.org/problems/bipartite-graph/1
 class GfG
 {
-	boolean isBipartite(int G[][],int V)
+    boolean isBipartite(int G[][],int V)
     {
         for(int i = 0; i < V; i++)
         {
@@ -60,3 +60,4 @@ class GfG
         return true;
     }
 }
+// Bipartite Graph: A graph which can be divided into two sets and the edges exits from either set 1 to set2 or set2 to set1
