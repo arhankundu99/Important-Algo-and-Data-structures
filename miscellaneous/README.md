@@ -12,3 +12,8 @@ and so on....
 https://www.geeksforgeeks.org/find-nth-even-length-palindromic-number-formed-using-digits-x-and-y/
 
 Palindrome problems: divide the problem into half and try to solve it
+
+#### Base conversion on java
+Integer.toString( 
+            Integer.parseInt(number, sBase), 
+            dBase);
