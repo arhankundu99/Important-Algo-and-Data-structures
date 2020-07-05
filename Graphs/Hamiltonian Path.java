@@ -1,6 +1,11 @@
 // https://practice.geeksforgeeks.org/problems/hamiltonian-path/0
 /*package whatever //do not write package name here */
 
+//Backtracking approach is used
+//Time complexity: O(N!)
+//a complete graph is a simple undirected graph in which every pair of distinct vertices is connected by a unique edge.
+//Number of hamiltonian cycles in a complete and undirected graph is (N-1)!/2
+
 import java.util.*;
 import java.lang.*;
 import java.io.*;
