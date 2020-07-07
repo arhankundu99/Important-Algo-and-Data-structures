@@ -9,3 +9,6 @@ Read about catalan numbers from here: <https://en.wikipedia.org/wiki/Catalan_num
 5. Cn is the number of different ways n + 1 factors can be completely parenthesized (or the number of ways of associating n applications of a binary operator).
 6. Cn is the number of unique BST which have n nodes from 1 to n.
 7. Cn is the number of non-isomorphic ordered trees with n + 1 vertices.
+
+
+<https://www.quora.com/How-many-Binary-heaps-can-be-made-from-N-distinct-elements> (VIP) <br />
