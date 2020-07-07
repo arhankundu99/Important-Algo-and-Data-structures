@@ -5,6 +5,7 @@ Refer this problems: <br />
 <https://leetcode.com/problems/largest-rectangle-in-histogram/> <br />
 <https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/> <br />
 <https://leetcode.com/problems/count-of-smaller-numbers-after-self/> <br />
+<https://www.quora.com/How-many-Binary-heaps-can-be-made-from-N-distinct-elements> (VIP) <br />
 
 1130. Minimum Cost Tree From Leaf Values
 907. Sum of Subarray Minimums
