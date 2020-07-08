@@ -2,71 +2,63 @@
 class Solution {
     public int largestRectangleArea(int[] heights) {
         if(heights.length == 0)return 0;
-        
         segmentTree st = new segmentTree(heights.length);
-        
         st.build(0, 0, heights.length-1, heights);
         
-        return solve(st, heights, 0, heights.length-1);        
+        return solve(heights, st, 0, heights.length-1);
     }
-    public int solve(segmentTree st, int[] heights, int l, int r){
-        pair pair = st.getMin(0, 0, heights.length-1, l, r);
-
-        int min = pair.val;
-        int minIdx = pair.idx;
+    public int solve(int[] heights, segmentTree st, int l, int r){
+        if(l > r)return Integer.MIN_VALUE;
         
+        int minIdx = st.getMinIdx(0, 0, heights.length-1, l, r, heights);
         
-        if(minIdx == Integer.MAX_VALUE)return Integer.MIN_VALUE;
-        
-        int area1 = min * (r-l+1);
-        
-        int area2 = Integer.MIN_VALUE, area3 = Integer.MIN_VALUE;
-        
-        if(minIdx - 1 >= l)area2 = solve(st, heights, l, minIdx-1);
-        if(r >= minIdx+1)area3 = solve(st, heights, minIdx+1, r);
-        
+        int area1 = heights[minIdx]*(r-l+1);
+        int area2 = solve(heights, st, l, minIdx-1);
+        int area3 = solve(heights, st, minIdx+1, r);
         
         return Math.max(area1, Math.max(area2, area3));
-        
     }
 }
 class segmentTree{
-    pair[] tree;
-    
+    int[] tree;
+    int[] idxTree;
     segmentTree(int n){
-        tree = new pair[4*n];
+        tree = new int[4*n];
+        idxTree = new int[4*n];
     }
     
-    void build(int node, int l, int r, int[] a){
+    void build(int node, int l, int r, int[]a){
         if(l == r){
-            tree[node] = new pair(a[l], l);
+            tree[node] = a[l];
+            idxTree[node] = l;
             return;
         }
         int mid = (l+r)/2;
+        
         build(2*node+1, l, mid, a);
         build(2*node+2, mid+1, r, a);
         
-        if(tree[2*node+1].val < tree[2*node+2].val)tree[node] = tree[2*node+1];
-        else tree[node] = tree[2*node+2];
+        if(tree[2*node+1] < tree[2*node+2]){
+            tree[node] = tree[2*node+1];
+            idxTree[node] = idxTree[2*node+1];
+        }
+        else{
+            tree[node] = tree[2*node+2];
+            idxTree[node] = idxTree[2*node+2];
+        }
     }
-    pair getMin(int node, int l, int r, int left, int right){
+    int getMinIdx(int node, int l, int r, int start, int end, int[] heights){
+        if(start > r || end < l)return Integer.MAX_VALUE;
+        if(l >= start && r <= end)return idxTree[node];
         
-        if(right < l || left > r)return new pair(Integer.MAX_VALUE, Integer.MAX_VALUE);
-        if(l >= left && r <= right)return tree[node];
         int mid = (l+r)/2;
+        int idx1 = getMinIdx(2*node+1, l, mid, start, end, heights);
+        int idx2 = getMinIdx(2*node+2, mid+1, r, start, end, heights);
         
-        pair pair1 = getMin(2*node+1, l, mid, left, right);
-        pair pair2 = getMin(2*node+2, mid+1, r, left, right);
+        if(idx1 == Integer.MAX_VALUE)return idx2;
+        if(idx2 == Integer.MAX_VALUE)return idx1;
         
-        if(pair1.val == pair2.val)return pair1.idx < pair2.idx? pair1: pair2;
-        if(pair1.val < pair2.val)return pair1;
-        return pair2;
-    }
-}
-class pair{
-    int val, idx;
-    pair(int val, int idx){
-        this.val = val;
-        this.idx = idx;
+        if(heights[idx1] < heights[idx2])return idx1;
+        return idx2;
     }
 }
