@@ -1,4 +1,5 @@
 //https://leetcode.com/problems/pancake-sorting/
+//whenever you encounter a sorting problem like this one, think how to get the largest number in the correct place. O(N^2) solution will generally get accepted
 class Solution {
     public List<Integer> pancakeSort(int[] A) {
         int lastIdx = A.length-1;
