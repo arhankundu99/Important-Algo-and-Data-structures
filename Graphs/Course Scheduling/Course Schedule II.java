@@ -1,6 +1,7 @@
 //leetcode problem 210
 //Difficulty: Medium
 //Problem Link: https://leetcode.com/problems/course-schedule-ii/
+//NOTE: We CANNOT DO TOPO SORT FOR CYCLIC GRAPHS
 
 class Solution {
     public int[] findOrder(int numCourses, int[][] prerequisites) {
