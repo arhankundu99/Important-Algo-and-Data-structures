@@ -10,3 +10,11 @@ For String Hashing, visit this link: <https://cp-algorithms.com/string/string-ha
 5. Aho-corasick
 6. Finite state automation
 7. Suffix trees
+
+```java
+int index = word.indexOf(guess);
+while(index >= 0) {
+   System.out.println(index);
+   index = word.indexOf(guess, index+1);
+}
+```
