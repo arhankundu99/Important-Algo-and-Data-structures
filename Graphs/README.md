@@ -13,3 +13,5 @@ More Problems: <br />
 2. DFS is used in decision making problems and BFS can be used to find shortest distance in an unweighted graph.
 3. Both have same time complexity: O(V+E)
 4. BFS is slower than DFS.
+
+## DO NOT USE DFS TO CALCULATE SHORTEST DISTANCE!
