@@ -14,4 +14,4 @@ More Problems: <br />
 3. Both have same time complexity: O(V+E)
 4. BFS is slower than DFS.
 
-## DO NOT USE DFS TO CALCULATE SHORTEST DISTANCE!
+#### DO NOT USE DFS TO CALCULATE SHORTEST DISTANCE UNLESS YOU USE DP
