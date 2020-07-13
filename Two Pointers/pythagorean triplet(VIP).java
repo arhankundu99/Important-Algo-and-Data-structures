@@ -1,5 +1,5 @@
 /*package whatever //do not write package name here */
-
+//https://www.geeksforgeeks.org/find-pythagorean-triplet-in-an-unsorted-array/
 //O(N^2) solution
 
 import java.util.*;
