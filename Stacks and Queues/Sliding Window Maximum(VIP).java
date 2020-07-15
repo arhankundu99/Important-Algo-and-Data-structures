@@ -3,6 +3,31 @@
 //Each time the sliding window moves right by one position. Return the max sliding window.
 // Very Important Problem
 
+// O(n) solution using stack (Use this in Exam)
+// https://www.geeksforgeeks.org/sliding-window-maximum-maximum-of-all-subarrays-of-size-k-using-stack-in-on-time/
+class Solution {
+    public int[] maxSlidingWindow(int[] nums, int k) {
+        Stack<Integer>stack = new Stack<>();
+        int[] max_upto = new int[nums.length];
+        for(int i = 0; i < nums.length; i++){
+            while(!stack.isEmpty() && nums[stack.peek()] < nums[i]){
+                max_upto[stack.peek()] = i - 1; 
+                stack.pop();
+            }
+            stack.push(i);
+        }
+        while(!stack.isEmpty()){
+            max_upto[stack.pop()] = nums.length - 1;
+        }
+        int[] ans = new int[nums.length - k + 1];
+        int j = 0;
+        for(int i = 0; i < nums.length - k + 1; i++){
+            while(j < i || max_upto[j] < i + k - 1)j++;
+            ans[i] = nums[j];
+        }
+        return ans;
+    }
+}
 // Using Priority Queue O(NlogK) time
 class Solution {
     public int[] maxSlidingWindow(int[] nums, int k) {
