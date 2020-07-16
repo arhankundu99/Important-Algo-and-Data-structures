@@ -19,16 +19,18 @@ Query   | Function
 |CREATE INDEX | creates an index (search key)
 |DROP INDEX | deletes an index
 
+Note: Sql Keywords are NOT Case-sensitive
+
 ### SELECT keyword
 This keyword is used to select data from databases. The selected data is returned in the form of a table. Consider the "Customers" table below 
 
 CustomerID |	        CustomerName  	     |   ContactName
 -----------|-------------------------------|---------------------
-1          |         Alfreds Futterkiste	 |   Maria Anders	
+1          |         Alfreds Futterkiste	 |  Maria Anders	
 2	         |         Ana Trujillo          |  Emparedados
 3	         |         Antonio Moreno        |	Antonio Moreno	
 4          |         Thomas                |  Hardy
-5	         |         Berglunds snabbköp	   | Christina Berglund	
+5	         |         Berglunds snabbköp	   |  Christina Berglund	
 
 
 ```sql
@@ -48,3 +50,38 @@ CustomerID	|        CustomerName
 3	          |        Antonio Moreno        		
 4           |        Thomas                  
 5	          |        Berglunds snabbköp
+
+### SELECT Distinct Keyword
+The SELECT DISTINCT statement is used to return only distinct (different) values. Consider the table below
+
+City	      |        State  	         	
+------------|---------------------
+Kanpur      |        UP	    	
+Varanasi	  |        UP            
+Dispur	    |        Assam        		
+Guwahati    |        Assam                  
+Hyderabad	  |        Telangana
+
+```sql
+SELECT DISTINCT State from table
+```
+This command will return the following column
+
+State
+------
+UP
+Assam
+Telangana
+
+```sql
+SELECT DISTINCT State, City from table
+```
+This command will return the following table
+
+City	      |        State  	         	
+------------|---------------------
+Kanpur      |        UP	    	            
+Dispur	    |        Assam        		              
+Hyderabad	  |        Telangana
+
+
