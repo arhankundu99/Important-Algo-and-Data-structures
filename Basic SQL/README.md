@@ -5,7 +5,8 @@ Sql stands for structural query language. We can use sql to access and manipulat
 A database often contains one or more tables. The tables can be broken down into records (rows) and fields (col).
 
 ### Most used keywords in SQL
------------------------------------------------
+Query   | Function
+--------|--------------------------------------
 |SELECT | extracts data from a database
 |UPDATE | updates data in a database
 |DELETE | deletes data from a database
