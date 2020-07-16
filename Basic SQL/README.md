@@ -67,11 +67,11 @@ SELECT DISTINCT State from table
 ```
 This command will return the following column
 
-State
-------
-UP
-Assam
-Telangana
+|State|
+|------|
+|UP|
+|Assam|
+|Telangana|
 
 ```sql
 SELECT DISTINCT State, City from table
