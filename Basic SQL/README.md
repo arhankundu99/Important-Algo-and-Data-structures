@@ -21,32 +21,30 @@ Query   | Function
 
 ### SELECT keyword
 This keyword is used to select data from databases. The selected data is returned in the form of a table. Consider the "Customers" table below 
-```
-CustomerID	        CustomerName  	        ContactName 	
-1                   Alfreds Futterkiste	    Maria Anders	
-2	                  Ana Trujillo            Emparedados
-3	                  Antonio Moreno        	Antonio Moreno	
-4                   Thomas                  Hardy
-5	                  Berglunds snabbköp	    Christina Berglund	
-```
+
+CustomerID |	        CustomerName  	     |   ContactName
+-----------|-------------------------------|---------------------
+1          |         Alfreds Futterkiste	 |   Maria Anders	
+2	         |         Ana Trujillo          |  Emparedados
+3	         |         Antonio Moreno        |	Antonio Moreno	
+4          |         Thomas                |  Hardy
+5	         |         Berglunds snabbköp	   | Christina Berglund	
+
 
 ```sql
 SELECT * from Customers;
-```sql
-
+```
 The above command will return the full table.
 
 ```sql
 SELECT CustomerID, CustomerName from Customers;
-```sql
-
+```
 The above command returns the following table
 
-```
-CustomerID	        CustomerName  	         	
-1                   Alfreds Futterkiste	    	
-2	                  Ana Trujillo            
-3	                  Antonio Moreno        		
-4                   Thomas                  
-5	                  Berglunds snabbköp
-```
+CustomerID	|        CustomerName  	         	
+------------|---------------------
+1           |        Alfreds Futterkiste	    	
+2	          |        Ana Trujillo            
+3	          |        Antonio Moreno        		
+4           |        Thomas                  
+5	          |        Berglunds snabbköp
