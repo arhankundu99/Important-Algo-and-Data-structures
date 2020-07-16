@@ -5,17 +5,18 @@ Sql stands for structural query language. We can use sql to access and manipulat
 A database often contains one or more tables. The tables can be broken down into records (rows) and fields (col).
 
 ### Most used keywords in SQL
-SELECT - extracts data from a database
-UPDATE - updates data in a database
-DELETE - deletes data from a database
-INSERT INTO - inserts new data into a database
-CREATE DATABASE - creates a new database
-ALTER DATABASE - modifies a database
-CREATE TABLE - creates a new table
-ALTER TABLE - modifies a table
-DROP TABLE - deletes a table
-CREATE INDEX - creates an index (search key)
-DROP INDEX - deletes an index
+-----------------------------------------------
+|SELECT | extracts data from a database
+|UPDATE | updates data in a database
+|DELETE | deletes data from a database
+|INSERT INTO | inserts new data into a database
+|CREATE DATABASE | creates a new database
+|ALTER DATABASE | modifies a database
+|CREATE TABLE | creates a new table
+|ALTER TABLE | modifies a table
+|DROP TABLE | deletes a table
+|CREATE INDEX | creates an index (search key)
+|DROP INDEX | deletes an index
 
 ### SELECT keyword
 This keyword is used to select data from databases. The selected data is returned in the form of a table. Consider the "Customers" table below 
