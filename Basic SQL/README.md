@@ -121,7 +121,6 @@ OR id = 1
 OPERATOR | DESCRIPTION
 ---------|------------
 =        | EQUAL
->=       | GREATER THAN OR EQUAL
 <>       | NOT EQUAL
 BETWEEN  | Between a certain range
 IN       | To specify multiple possible values for a column
