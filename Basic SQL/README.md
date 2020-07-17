@@ -84,4 +84,68 @@ Kanpur      |        UP
 Dispur	    |        Assam        		              
 Hyderabad	  |        Telangana
 
+### WHERE Keyword
 
+```sql
+SELECT Col1, Col2
+FROM table
+where condition
+```
+
+#### Examples
+
+```sql
+SELECT * from table
+WHERE City = 'Hyd'
+```
+
+```sql
+SELECT * from table
+WHERE NOT City = 'Hyd'
+```
+
+```sql
+SELECT * from table
+WHERE City = 'Hyd'
+AND id = 1
+```
+
+```sql
+SELECT * from table
+WHERE City = 'Hyd'
+OR id = 1
+```
+
+### Operators in WHERE Clause
+
+OPERATOR | DESCRIPTION
+---------|------------
+=        | EQUAL
+>=       | GREATER THAN OR EQUAL
+<>       | NOT EQUAL
+BETWEEN  | Between a certain range
+IN       | To specify multiple possible values for a column
+LIKE     | To Search for a pattern
+NOT      | Not equal
+
+```sql
+SELECT * from table
+WHERE ID in (1, 2)
+```
+
+```sql
+SELECT * from table
+WHERE ID BETWEEN (1, 10)
+```
+NOTE: In the range (1, 10), 1 and 10 are inclusive
+
+### ORDER BY Keyword
+
+ORDER BY Keyword is used to sort the selected records
+
+```sql
+SELECT * FROM Customers
+ORDER BY Country ASC, CustomerName DESC;
+```
+
+The above query first sorts the records in ascending order wrt Country, if two countries are same, then it sorts the record in descending order wrt CustomerName
