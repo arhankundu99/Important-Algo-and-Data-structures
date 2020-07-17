@@ -16,5 +16,5 @@ More Problems: <br />
 
 #### DO NOT USE DFS TO CALCULATE SHORTEST DISTANCE UNLESS YOU USE DP
 
-<https://www.geeksforgeeks.org/cycles-of-length-n-in-an-undirected-and-connected-graph/#:~:text=Source%20Shortest%20Path-,Cycles%20of%20length%20n%20in%20an%20undirected%20and%20connected%20graph,n%20vertices%20and%20n%20edges.>
-To find cycles of length n
+<https://www.geeksforgeeks.org/cycles-of-length-n-in-an-undirected-and-connected-graph/#:~:text=Source%20Shortest%20Path-,Cycles%20of%20length%20n%20in%20an%20undirected%20and%20connected%20graph,n%20vertices%20and%20n%20edges.> <br/>
+To find cycles of length n: use dfs and find the paths of length n-1. if the current vertex has an edge with the starting vertex, then increment count
