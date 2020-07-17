@@ -148,3 +148,33 @@ ORDER BY Country ASC, CustomerName DESC;
 ```
 
 The above query first sorts the records in ascending order wrt Country, if two countries are same, then it sorts the record in descending order wrt CustomerName
+
+### INSERT INTO
+
+This keyword is used to insert records in database
+
+```sql
+INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...);
+```
+
+Example
+```sql
+INSERT INTO Customers (CustomerName, City, Country)
+VALUES('Mike', 'Dubai', 'UAE');
+```
+In the remaining columns, values will be null
+
+### NULL Keyword
+```sql
+SELECT column_names
+FROM table_name
+WHERE column_name IS NULL;
+```
+
+```sql
+SELECT column_names
+FROM table_name
+WHERE column_name IS NOT NULL;
+```
+Always use IS NULL to look for NULL values.
