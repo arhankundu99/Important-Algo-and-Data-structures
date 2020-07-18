@@ -1,4 +1,6 @@
-   // https://practice.geeksforgeeks.org/problems/maximum-sum-rectangle/0
+// https://practice.geeksforgeeks.org/problems/maximum-sum-rectangle/0
+// Idea inspired from: https://leetcode.com/problems/number-of-submatrices-that-sum-to-target/discuss/303750/JavaC%2B%2BPython-Find-the-Subarray-with-Target-Sum
+
    public static int maxSumSubmatrix(int[][] matrix) {
         for(int i = 0; i < matrix.length; i++){
             for(int j = 1; j < matrix[0].length; j++){
