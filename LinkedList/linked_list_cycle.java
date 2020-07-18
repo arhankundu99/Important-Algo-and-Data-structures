@@ -32,6 +32,9 @@ public class Solution {
 // that tortoise is stationary and hare moves by 1 unit forward since the relative speed is 1 unit.
 // So they are bound to meet if a cycle exists
 
+// What will happen if the hare moves n times faster where n > 2?
+
+
 
 // Another method
 // Use hashing
