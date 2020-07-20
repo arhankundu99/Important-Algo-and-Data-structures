@@ -178,3 +178,79 @@ FROM table_name
 WHERE column_name IS NOT NULL;
 ```
 Always use IS NULL to look for NULL values.
+
+### UPDATE Keyword
+```sql
+UPDATE table_name
+SET col1 = value1, col2 = value2
+WHERE Condition
+```
+
+### DELETE Keyword
+```sql
+DELETE FROM table_name
+WHERE Keyword
+```
+
+### SQL SELECT TOP Keyword
+Selects top k records
+```sql
+SELECT TOP number|percent col1, col2, col3
+FROM table_name
+WHERE condition
+```
+
+### SQL MIN, MAX, COUNT, AVG, SUM
+```sql
+SELECT MIN(COL1)
+FROM table_name
+where condition
+```
+Same syntax for other functions
+Count gives us the number of records selected
+
+### SQL LIKE Keyword
+
+OPERATOR | DESCRIPTION
+---------|-------------
+%        | zero or one or more characters
+_        | one character
+#        | represents any single numerical character. (2#5) can mean 205, 215,.....295
+[]       | Represents any single character. a[bd]c can mean abc, adc
+!        | Represents character which are not in brackets a[!bd]c means aac, acc, aec...etc
+-        | Represents range of characters a[b-z]c means abc, acz, adz, aez....azz
+
+```sql
+SELECT * 
+FROM table_name
+WHERE Col1 LIKE 'a%n'
+```
+The above query selects words which start with a and end with n
+
+### SQL Aliases
+
+SQL Aliases are used to give the table or columns of the table a temporary name.
+Why are they used? TO MAKE THE COLUMN NAMES MORE READABLE.
+This alias will only exist till the duration of the query.
+
+```sql
+SELECT col1 AS alias_name
+from table_name;
+
+SELECT col1
+from table_name AS alias_name
+
+SELECT col1 AS [alias name]
+from table_name;
+// if alias name contains space, then use bracket
+
+SELECT col1 as c1, col2 + ", " + col3 + ", " + col4 as c2
+from table_name;
+// column concatenation
+
+SELECT t1.col1, t2.col1
+from table1 as t1, table2 as t2
+where condition;
+// selecting data from multiple tables
+```
+
