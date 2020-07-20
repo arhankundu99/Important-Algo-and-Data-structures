@@ -218,7 +218,7 @@ _        | one character
 \#        | represents any single numerical character. (2\#5) can mean 205, 215,.....295
 \[]       | Represents any single character. a[bd]c can mean abc, adc
 !        | Represents character which are not in brackets a[!bd]c means aac, acc, aec...etc
--        | Represents range of characters a[b-z]c means abc, acz, adz, aez....azz
+\-        | Represents range of characters a[b-z]c means abc, acz, adz, aez....azz
 
 ```sql
 SELECT * 
