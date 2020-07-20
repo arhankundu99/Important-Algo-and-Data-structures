@@ -215,8 +215,8 @@ OPERATOR | DESCRIPTION
 ---------|-------------
 %        | zero or one or more characters
 _        | one character
-#        | represents any single numerical character. (2#5) can mean 205, 215,.....295
-[]       | Represents any single character. a[bd]c can mean abc, adc
+\#        | represents any single numerical character. (2\#5) can mean 205, 215,.....295
+\[]       | Represents any single character. a[bd]c can mean abc, adc
 !        | Represents character which are not in brackets a[!bd]c means aac, acc, aec...etc
 -        | Represents range of characters a[b-z]c means abc, acz, adz, aez....azz
 
@@ -242,15 +242,15 @@ from table_name AS alias_name
 
 SELECT col1 AS [alias name]
 from table_name;
-// if alias name contains space, then use bracket
+/* if alias name contains space, then use bracket */
 
 SELECT col1 as c1, col2 + ", " + col3 + ", " + col4 as c2
 from table_name;
-// column concatenation
+/* column concatenation */
 
 SELECT t1.col1, t2.col1
 from table1 as t1, table2 as t2
 where condition;
-// selecting data from multiple tables
+/* selecting data from multiple tables */
 ```
 
