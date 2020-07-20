@@ -253,4 +253,25 @@ from table1 as t1, table2 as t2
 where condition;
 /* selecting data from multiple tables */
 ```
+### SQL JOINS (VERY IMPORTANT)
+We can definitely use where instead of joins (There are no performance benefits). But using join makes the query more readable.
 
+The different types of joins are:
+1) INNER JOIN: Returns the records which have matching values in both the table.
+2) LEFT JOIN: Returns all the left table records plus the matched records in the right table
+3) RIGHT JOIN: Returns all the right table records plus the matched records in the left table.
+4) FULL JOIN OR FULL OUTER JOIN: Returns all records from both the tables whether they are matched or not.
+5) A self JOIN is a regular join, but the table is joined with itself.
+```sql
+SELECT table1.col1, table2.col2
+FROM table1
+INNER JOIN table2
+ON table1.id = table2.id
+```
+
+```sql
+SELECT * FROM table1 a
+JOIN table2 b ON a.ID = b.ID
+JOIN table3 c ON a.ID = c.ID
+
+/* Joining Multiple tables */
