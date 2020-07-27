@@ -1,6 +1,7 @@
 /*package whatever //do not write package name here */
 // https://practice.geeksforgeeks.org/problems/stock-buy-and-sell/0
 // https://www.geeksforgeeks.org/stock-buy-sell/
+// Note: Here we cannot buy and sell on the same day
 
 import java.util.*;
 import java.lang.*;
