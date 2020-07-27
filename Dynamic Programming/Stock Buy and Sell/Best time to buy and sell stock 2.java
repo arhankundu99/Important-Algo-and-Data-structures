@@ -1,5 +1,5 @@
 // https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/
-// here we can engage in multiple transactions.
+// here we can engage in multiple transactions and buy and sell on the same day.
 
 class Solution {
     public int maxProfit(int[] prices) {
