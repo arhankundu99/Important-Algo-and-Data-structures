@@ -19,3 +19,5 @@ Integer.toString(
             dBase);
             
 <https://www.geeksforgeeks.org/search-an-element-in-an-array-where-difference-between-adjacent-elements-is-1/>
+<https://www.geeksforgeeks.org/check-if-an-array-is-sorted-and-rotated-using-binary-search/?ref=leftbar-rightbar>
+<https://www.geeksforgeeks.org/logarithm-tricks-for-competitive-programming/?ref=leftbar-rightbar>
