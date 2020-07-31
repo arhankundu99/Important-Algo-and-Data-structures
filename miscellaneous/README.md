@@ -9,7 +9,7 @@ no of 4 digit palindromes = 90 <br>
 no of 5 digit palindromes = 900 <br>
 and so on....
 
-https://www.geeksforgeeks.org/find-nth-even-length-palindromic-number-formed-using-digits-x-and-y/
+<https://www.geeksforgeeks.org/find-nth-even-length-palindromic-number-formed-using-digits-x-and-y/>
 
 Palindrome problems: divide the problem into half and try to solve it
 
@@ -17,3 +17,5 @@ Palindrome problems: divide the problem into half and try to solve it
 Integer.toString( 
             Integer.parseInt(number, sBase), 
             dBase);
+            
+<https://www.geeksforgeeks.org/search-an-element-in-an-array-where-difference-between-adjacent-elements-is-1/>
