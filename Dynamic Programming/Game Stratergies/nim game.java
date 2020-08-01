@@ -13,3 +13,6 @@ As you can see if f(x-4) is false, then A loses the game.
 f(1), f(2), f(3) are true
 this inplies f(4n+1), f(4n+2), f(4n+3) is true.
 and f(4n) is false.
+    
+// check this: https://leetcode.com/problems/nim-game/discuss/73760/One-line-O(1)-solution-and-explanation
+// variation of this problem: https://www.geeksforgeeks.org/combinatorial-game-theory-set-2-game-nim/
