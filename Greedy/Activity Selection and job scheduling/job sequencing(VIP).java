@@ -3,6 +3,8 @@
 // https://practice.geeksforgeeks.org/problems/job-sequencing-problem/0/
 /*package whatever //do not write package name here */
 
+// Try this: https://www.geeksforgeeks.org/job-sequencing-problem-loss-minimization/
+
 import java.util.*;
 import java.lang.*;
 import java.io.*;
