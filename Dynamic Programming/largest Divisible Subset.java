@@ -36,7 +36,7 @@ class Solution {
 }
 
 // Approach 2: Using DP
-// Time Complexity: O(N)
+// Time Complexity: O(N*N)
 // Space Complexity: O(N)
 class Solution {
     public List<Integer> largestDivisibleSubset(int[] nums) {
