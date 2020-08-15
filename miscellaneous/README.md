@@ -10,7 +10,18 @@ no of 5 digit palindromes = 900 <br>
 and so on....
 
 <https://www.geeksforgeeks.org/find-nth-even-length-palindromic-number-formed-using-digits-x-and-y/>
-
+```java
+assuming x < y
+n = log(N/2 + 1)
+if(n == (int)n)ans = yyyy....(2 power n) times
+else{
+     int x = N - ((2 power (n + 1)) - 2)
+     now find xth palindrome of 2 power (n+1) digits
+     
+     String s = write x in binary and then replace 0 with x and 1 with y
+     ans = s + mirror(s)
+}
+```
 Palindrome problems: divide the problem into half and try to solve it
 
 #### Base conversion on java
