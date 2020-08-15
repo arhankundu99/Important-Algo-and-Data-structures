@@ -1,4 +1,6 @@
-// Given 2 strings s1 and s2, find all palindromes that can be formed with the letters of each string. from those palindromes select one from each set such that when combined and rearranged produces the largest palindrome possible. if there are more than 1 palindrome, choose the alphabetically smallest of them
+// Given 2 strings s1 and s2, find all palindromes that can be formed with the letters of each string. 
+// from those palindromes select one from each set such that when combined and rearranged produces the largest palindrome possible. 
+// if there are more than 1 palindrome, choose the alphabetically smallest of them
 
 /*package whatever //do not write package name here */
 
