@@ -22,3 +22,12 @@ Explaination:
 ```first term k*S(n-1, k)``` denotes divide n-1 numbers in k subsets and add n in any one of the subset
 ```second term S(n-1, k-1)``` denotes putting the nth element in a seperate partiion
 
+## Bell numbers: Count the number of ways to partition a set
+
+
+```
+   B[0][0] = 1
+   B[i][j] = B[i-1][i-1] if j = 0
+           = B[i-1][j-1] + B[i][j-1]
+```
+The number of ways is given by ```B[N][0]```
