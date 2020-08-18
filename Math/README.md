@@ -12,3 +12,13 @@ Read about catalan numbers from here: <https://en.wikipedia.org/wiki/Catalan_num
 
 
 <https://www.quora.com/How-many-Binary-heaps-can-be-made-from-N-distinct-elements> (VIP) <br />
+
+## Count number of ways to partition a set into k subsets
+
+```S(n, k) = k*S(n-1, k) + S(n-1, k-1)```
+**S(n, k) is called Stirling numbers of 2nd kind**
+
+Explaination: 
+```first term k*S(n-1, k)``` denotes divide n-1 numbers in k subsets and add n in any one of the subset
+```second term S(n-1, k-1)``` denotes putting the nth element in a seperate partiion
+
