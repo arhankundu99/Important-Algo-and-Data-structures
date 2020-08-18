@@ -13,7 +13,7 @@ Read about catalan numbers from here: <https://en.wikipedia.org/wiki/Catalan_num
 
 <https://www.quora.com/How-many-Binary-heaps-can-be-made-from-N-distinct-elements> (VIP) <br />
 
-## Count number of ways to partition a set into k subsets
+# Count number of ways to partition a set into k subsets
 
 ```S(n, k) = k*S(n-1, k) + S(n-1, k-1)```
 **S(n, k) is called Stirling numbers of 2nd kind**
@@ -22,7 +22,7 @@ Explaination:
 ```first term k*S(n-1, k)``` denotes divide n-1 numbers in k subsets and add n in any one of the subset
 ```second term S(n-1, k-1)``` denotes putting the nth element in a seperate partiion
 
-## Bell numbers: Count the number of ways to partition a set
+# Bell numbers: Count the number of ways to partition a set
 
 
 ```
@@ -31,3 +31,7 @@ Explaination:
            = B[i-1][j-1] + B[i][j-1]
 ```
 The number of ways is given by ```B[N][0]```
+
+# Find Nth square free number
+A number is square free if it is not divisible by any perfect square other than 1
+<https://www.geeksforgeeks.org/nth-square-free-number/> <br/>
