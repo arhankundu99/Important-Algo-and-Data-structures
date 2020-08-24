@@ -70,3 +70,74 @@ Takes O(h) time where h is the height of the tree (Worst case: O(n) time)
 2) Bst takes O(h) time (worst case O(n) time in case of a skewed tree)
 3) AVL takes O(logn) time (As they are height balanced trees)
 
+
+# Tree traversals
+```java
+
+//inorder
+class Solution {
+    public List<Integer> inorderTraversal(TreeNode root) {
+        List<Integer>list = new ArrayList<>();
+        
+        Stack<TreeNode>stack = new Stack<>();
+        
+        TreeNode curr = root;
+        
+        while(curr != null || !stack.isEmpty()){
+            while(curr != null){
+                stack.push(curr);
+                curr = curr.left;
+            }
+            curr = stack.pop();
+            list.add(curr.val);
+            
+            curr = curr.right;
+        }
+        return list;
+    }
+}
+
+// preorder
+class Solution {
+    public List<Integer> preorderTraversal(TreeNode root) {
+        TreeNode curr = root;
+        Stack<TreeNode> stack = new Stack<>();
+        List<Integer> list = new ArrayList<>();
+        
+        while(curr != null || stack.size() != 0){
+            while(curr != null){
+                list.add(curr.val);
+                stack.push(curr);
+                curr = curr.left;
+            }
+            curr = stack.pop();
+            curr = curr.right;
+        }
+        return list;
+    }
+}
+
+//postorder
+class Solution {
+    public List<Integer> postorderTraversal(TreeNode root) {
+        List<Integer> list = new ArrayList<>();
+        Stack<TreeNode>stack = new Stack<>();
+        
+        TreeNode curr = root;
+        
+        while(curr != null || stack.size() != 0){
+            while(curr != null){
+                stack.push(curr);
+                list.add(curr.val);
+                curr = curr.right;
+            }
+            curr = stack.pop();
+            curr = curr.left;
+        }
+        Collections.reverse(list);
+        return list;
+    }
+}
+note that postorder is obtained by making slight modications in preorder code
+instead of DLR we are doing DRL and reversing the list
+```
