@@ -1,5 +1,4 @@
 /*package whatever //do not write package name here */
-// https://practice.geeksforgeeks.org/problems/count-of-subarrays/0
 
 import java.util.*;
 import java.lang.*;
@@ -26,18 +25,14 @@ class GFG {
 	    int count = 0;
 	    while(idx2 < a.length){
 	        if(a[idx2] > k){
-	            //idx1 to idx2-1 contains elements which are less than k
-	            int n = idx2-idx1;
-	            count += (n*(n+1))/2;
-	            
 	            idx2++;
 	            idx1 = idx2;
 	        }
-	        else idx2++;
+	        else{
+	            count += idx2-idx1+1;
+	            idx2++;
+	        }
 	    }
-	    int n = idx2-idx1;
-	    count += (n*(n+1))/2;
-	    
 	    int total = (a.length)*(a.length+1)/2;
 	    return total - count;
 	}
