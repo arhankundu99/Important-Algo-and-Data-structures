@@ -15,3 +15,9 @@ One of the main application of tries is the auto completion of a query in the go
 
 For very efficient string matching algorithm, refer this: <https://www.geeksforgeeks.org/aho-corasick-algorithm-pattern-searching/>
 For more information on tries refer this: <https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/535/week-2-may-8th-may-14th/3329/>
+
+# Trie over hashmap
+With Trie, we can insert and find strings in O(L) time where L represent the length of a single word. This is obviously faster than BST. This is also faster than Hashing because of the ways it is implemented. We do not need to compute any hash function. No collision handling is required
+
+# Hashmap over trie
+Trie requires more space than hashmap.
