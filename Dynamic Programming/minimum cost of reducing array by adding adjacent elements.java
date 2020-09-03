@@ -1,5 +1,6 @@
 /*package whatever //do not write package name here */
-
+// Follow up: What if we could add any 2 elements from the array and merge them? what will be the minimum cost?....Yes, greedy approach will work:) 
+// Add two minimum elements every time and add them in priority queue 
 import java.util.*;
 
 class GFG {
