@@ -6,7 +6,7 @@
 
 //Your goal is to reach the last index in the minimum number of jumps.
 
-
+//O(N^2) solution (TLE)
 class Solution {
     int[]dp;
     public int jump(int[] nums) {
@@ -23,5 +23,23 @@ class Solution {
                     }
                 }
         return dp[nums.length-1];
+    }
+}
+//greedy O(N) solution
+class Solution {
+    public int jump(int[] nums) {
+        int currEnd = 0, currFarthest = 0;
+        int jumps = 0;
+        for(int i = 0; i < nums.length; i++){
+            if(i > currFarthest)return -1;
+            
+            currFarthest = Math.max(currFarthest, nums[i] + i);
+            
+            if(i == currEnd && i != nums.length-1){
+                jumps++;
+                currEnd = currFarthest;
+            }
+        }
+        return jumps;
     }
 }
