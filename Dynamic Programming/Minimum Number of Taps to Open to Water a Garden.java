@@ -10,7 +10,7 @@ Return the minimum number of taps that should be open to water the whole garden,
 
 // Idea: for every tap, we have a range for that tap. We just have to merge the intervals until we get the interval (0, n)
 // Therefore this problem reduces to finding minimum number of merges of intervals to get interval (0,n)
-// Time complexity O(nlogn)
+// Time complexity O(n^2)
 class Solution {
     int[]dp;
     public int minTaps(int n, int[] ranges) {
