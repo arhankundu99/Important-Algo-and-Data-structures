@@ -10,6 +10,47 @@ Initially, the frog is on the first stone and assume the first jump must be 1 un
 If the frog's last jump was k units, then its next jump must be either k - 1, k, or k + 1 units. 
 Note that the frog can only jump in the forward direction.
 */
+class Solution {
+    public boolean canCross(int[] stones) {
+        int N = stones.length;
+        boolean[][] dp = new boolean[N][N + 1];
+        dp[0][1] = true;
+        
+        for(int i = 1; i < N; ++i){
+            for(int j = 0; j < i; ++j){
+                int diff = stones[i] - stones[j];
+                if(diff < 0 || diff > N || !dp[j][diff]) continue;
+                dp[i][diff] = true;
+                if(diff - 1 >= 0) dp[i][diff - 1] = true;
+                if(diff + 1 <= N) dp[i][diff + 1] = true;
+                if(i == N - 1) return true;
+            }
+        }
+
+        return false;
+    }
+}
+
+ class Solution {
+    public boolean canCross(int[] stones) {
+        Set<Integer>[] set = new HashSet[stones.length];
+        
+        for(int i = 0; i < stones.length; i++)set[i] = new HashSet<>();
+        
+        set[0].add(0);
+        
+        for(int i = 1; i < stones.length; i++){
+            for(int j = 0; j < i; j++){
+                int dist = stones[i] - stones[j];
+                
+                if(set[j].contains(dist-1) || set[j].contains(dist) || set[j].contains(dist+1))
+                    set[i].add(dist);
+            }
+        }
+        return set[stones.length-1].size() == 0?false: true;
+    }
+}
+
 
 class Solution {
     boolean[]vis;
