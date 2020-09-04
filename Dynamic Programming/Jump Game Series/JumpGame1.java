@@ -4,6 +4,32 @@
 
 //Determine if you are able to reach the last index.
 
+//solution 1: Top Down Memoization (TLE) O(N*Max(nums[i]))
+class Solution {
+    int[] dp;
+    public boolean canJump(int[] nums) {
+        dp = new int[nums.length];
+        Arrays.fill(dp, -1);
+        return canJump(nums, 0);
+    }
+    public boolean canJump(int[] nums, int idx){
+        if(idx >= nums.length-1)return true;
+        
+        if(dp[idx] == 0)return false;
+        if(dp[idx] == 1)return true;
+        
+        for(int i = 1; i <= nums[idx]; i++){
+            if(canJump(nums, idx+i)){
+                dp[idx] = 1;
+                return true;
+            }
+        }
+        dp[idx] = 0;
+        return false;
+    }
+}
+
+// solution 2: O(N^2) Bottom up. TLE
 class Solution {
     public boolean canJump(int[] nums) {
         int[]dp = new int[nums.length];
@@ -26,3 +52,16 @@ class Solution {
 }
 
 //dp[i] represents the minimum number of jumps to reach tile i. 
+
+//greedy O(n) solution
+class Solution {
+    public boolean canJump(int[] nums) {
+        int max = 0;
+        
+        for(int i = 0; i < nums.length; i++){
+            if(i > max)return false;
+            max = Math.max(max, i + nums[i]);
+        }
+        return true;
+    }
+}
