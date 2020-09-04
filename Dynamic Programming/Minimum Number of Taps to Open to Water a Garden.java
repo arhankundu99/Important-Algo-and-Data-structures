@@ -6,7 +6,34 @@ There are n + 1 taps located at points [0, 1, ..., n] in the garden.
 Given an integer n and an integer array ranges of length n + 1 where ranges[i] (0-indexed) means the i-th tap can water the area [i - ranges[i], i + ranges[i]] if it was open.
 Return the minimum number of taps that should be open to water the whole garden, If the garden cannot be watered return -1.
 */
-
+//O(n) solution similar to vide stiching and jump game 2
+class Solution {
+    public int minTaps(int n, int[] ranges) {
+        int[] arr = new int[n+1];
+        
+        for(int i = 0; i < ranges.length; i++){
+            int left = Math.max(0, i - ranges[i]);
+            int right = i+ranges[i];
+            
+            arr[left] = Math.max(arr[left], right);
+        }
+        
+        int currEnd = 0, currFarthest = 0, jumps = 0;
+        
+        for(int i = 0; i < arr.length; i++){
+            if(i > currFarthest){
+                return -1;
+            }
+            currFarthest = Math.max(currFarthest, arr[i]);
+            
+            if(i == currEnd && i != n){
+                jumps++;
+                currEnd = currFarthest;
+            }
+        }
+        return jumps;
+    }
+}
 
 // Idea: for every tap, we have a range for that tap. We just have to merge the intervals until we get the interval (0, n)
 // Therefore this problem reduces to finding minimum number of merges of intervals to get interval (0,n)
