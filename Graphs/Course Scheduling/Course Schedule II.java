@@ -53,7 +53,7 @@ class Solution {
         if(vis[idx])return false;
         
         rec[idx] = true;
-        vis[idx] = false;
+        vis[idx] = true;
         
         for(int i = 0; i < graph[idx].size(); i++)
             if(isCyclic(graph, graph[idx].get(i), rec, vis))return true;
