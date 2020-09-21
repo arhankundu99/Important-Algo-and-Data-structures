@@ -1,31 +1,29 @@
 //https://www.lintcode.com/problem/convert-binary-search-tree-to-sorted-doubly-linked-list/description
 public class Solution {
-    /**
-     * @param root: root of a tree
-     * @return: head node of a doubly linked list
-     */
-    TreeNode head = null;
-    TreeNode curr = null;
+    TreeNode head = null, tail = null;
     public TreeNode treeToDoublyList(TreeNode root) {
-        if(root == null)return head;
-        helper(root);
-        curr.right = head;
-        head.left = curr;
+        if(root == null)return null;
+        inorder(root);
+        
+        tail.right = head;
+        head.left = tail;
+        
         return head;
     }
-    public TreeNode helper(TreeNode root) {
-        if(root == null)return head;
-        helper(root.left);
+    public void inorder(TreeNode root){
+        if(root == null)return;
+        
+        inorder(root.left);
+        
         if(head == null){
             head = root;
-            curr = head;
+            tail = head;
         }
         else{
-            curr.right = root;
-            curr.right.left = curr;
-            curr = curr.right;
+            tail.right = root;
+            root.left = tail;
+            tail = tail.right;
         }
-        helper(root.right);
-        return head;
+        inorder(root.right);
     }
 }
