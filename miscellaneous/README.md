@@ -1,6 +1,6 @@
 #### nth palindrome of k digits:
-half num = (n-1) + 10^(k) if k is odd <br>
-         = (n-1) + 10^(k-1) otherwise <br>
+half num = `(n-1) + 10^(k) if k is odd <br>
+         =  (n-1) + 10^(k-1) otherwise <br>`
    
 no of 1 digit palindromes = 9 <br>
 no of 2 digit palindromes = 9 <br>
@@ -13,7 +13,7 @@ and so on....
 ```java
 assuming x < y
 n = log(N/2 + 1)
-if(n == (int)n)ans = yyyy....(2 power n) times
+if(n == (int)n)ans = yyyy....(2 * n) times
 else{
      int x = N - ((2 power (n + 1)) - 2)
      now find xth palindrome of 2 power (n+1) digits
@@ -22,6 +22,52 @@ else{
      ans = s + mirror(s)
 }
 ```
+
+```java
+/*package whatever //do not write package name here */
+
+import java.io.*;
+import java.util.*;
+
+class GFG {
+	public static void main (String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int N = scan.nextInt();
+		
+		int x = scan.nextInt();
+		int y = scan.nextInt();
+		
+		System.out.println(solve(N, x, y));
+	}
+	public static String solve(int N, int x, int y){
+	    StringBuilder sb = new StringBuilder();
+	    double n = Math.log(N/2 + 1)/Math.log(2);
+	    
+	    if(n == (int)n){
+	        for(int i = 1; i <= 2*n; i++)sb.append(y);
+	        return sb.toString();
+	    }
+	    
+	    N -= 2*((1<<(int)n) - 1) + 1;
+	    
+	    sb.append(Integer.toBinaryString(N));
+	    
+	    int paddingLength = (int)(n+1) - sb.length();
+	    
+	    for(int i = 0; i < paddingLength; i++)sb.insert(0, 0);
+	    
+	    char[] c = sb.toString().toCharArray();
+	    
+	    for(int i = 0; i < c.length; i++)
+	        if(c[i] == '0')c[i] = (char)(x+48);
+	        else c[i] = (char)(y+48);
+	        
+	    sb = new StringBuilder(String.valueOf(c));
+	    return sb.toString() + sb.reverse().toString();
+	}
+}
+```
+link: https://www.geeksforgeeks.org/find-nth-even-length-palindromic-number-formed-using-digits-x-and-y/> <br/>
 Palindrome problems: divide the problem into half and try to solve it
 
 #### Base conversion on java
