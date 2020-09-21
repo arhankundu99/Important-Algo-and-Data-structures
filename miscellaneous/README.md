@@ -1,6 +1,6 @@
 #### nth palindrome of k digits:
-half num = `(n-1) + 10^(k) if k is odd <br>
-         =  (n-1) + 10^(k-1) otherwise <br>`
+half num = `(n-1) + 10^(k) if k is odd` <br/>
+         = `(n-1) + 10^(k-1) otherwise` <br/>
    
 no of 1 digit palindromes = 9 <br>
 no of 2 digit palindromes = 9 <br>
