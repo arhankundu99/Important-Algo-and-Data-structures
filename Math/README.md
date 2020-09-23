@@ -35,3 +35,7 @@ The number of ways is given by ```B[N][0]```
 # Find Nth square free number
 A number is square free if it is not divisible by any perfect square other than 1
 <https://www.geeksforgeeks.org/nth-square-free-number/> <br/>
+
+# Boyer-Moore Voting Algorithm
+<https://leetcode.com/problems/majority-element-ii/> <br/>
+<https://leetcode.com/problems/majority-element/> <br/>
