@@ -1,4 +1,3 @@
-// https://leetcode.com/problems/max-points-on-a-line/
 class Solution {
     public int maxPoints(int[][] points) {
         if(points.length == 0 || points.length == 1)return points.length;
@@ -7,7 +6,7 @@ class Solution {
         for(int i = 1; i < points.length; i++){
             int duplicate = 0;
             int maxPoints = 0;
-            Map<Integer, Map<Integer, Integer>>map = new HashMap<>();
+            Map<pair, Integer>map = new HashMap<>();
             for(int j = 0; j < i; j++){
                 int x2 = points[i][0];
                 int y2 = points[i][1];
@@ -28,15 +27,11 @@ class Solution {
                 dX /= gcd;
                 dY /= gcd;
                 
-                if(!map.containsKey(dX)){
-                    Map<Integer, Integer> map2 = new HashMap<>();
-                    map2.put(dY, 1);
-                    map.put(dX, map2);
-                }
-                else if(!map.get(dX).containsKey(dY))map.get(dX).put(dY, 1);
-                else map.get(dX).put(dY, map.get(dX).get(dY)+1);
+                pair pair = new pair(dX, dY);
+                if(map.containsKey(pair))map.put(pair, map.get(pair)+1);
+                else map.put(pair, 1);
                 
-                maxPoints = Math.max(maxPoints, map.get(dX).get(dY));
+                maxPoints = Math.max(maxPoints, map.get(pair));
             }
             maxPoints += duplicate + 1;
             ans = Math.max(ans, maxPoints);
@@ -46,5 +41,21 @@ class Solution {
     public int gcd(int a, int b){
         if(b == 0)return a;
         return gcd(b, a%b);
+    }
+}
+class pair{
+    int x, y;
+    pair(int x, int y){
+        this.x = x;
+        this.y = y;
+    }
+    @Override
+    public int hashCode(){
+        return x*31+y;
+    }
+    @Override
+    public boolean equals(Object o){
+        pair pair = (pair)o;
+        return ((this.x == pair.x) && (this.y == pair.y));
     }
 }
