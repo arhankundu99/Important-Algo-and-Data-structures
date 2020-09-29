@@ -4,59 +4,40 @@
 // very important
 
 /*package whatever //do not write package name here */
+// https://leetcode.com/problems/minimum-window-substring/
 
-import java.util.*;
-import java.lang.*;
-import java.io.*;
-
-class GFG {
-	public static void main (String[] args) {
-		Scanner scan = new Scanner(System.in);
-		int t = scan.nextInt();
-		while(t-->0){
-		    String s = scan.next();
-		    String text = scan.next();
-		    
-		    System.out.println(solve(s, text));
-		}
-	}
-	public static String solve(String s, String t){
-	    if(t.length() > s.length())return "-1";
-	    
-	    int minLength = Integer.MAX_VALUE;
-	    
-	    Map<Character, Integer>map = new HashMap<>();
-	    int count = t.length();
-	    
-	    for(int i = 0; i < t.length(); i++){
-	        if(!map.containsKey(t.charAt(i)))map.put(t.charAt(i), 1);
-	        else map.put(t.charAt(i), map.get(t.charAt(i))+1);
-	    }
-	    int j = 0;
-	    int idx1 = -1, idx2 = -1;
-	    for(int i = 0; i < s.length(); i++){
-	        if(map.containsKey(s.charAt(i))){
-	            if(map.get(s.charAt(i)) > 0)count--;
-	            map.put(s.charAt(i), map.get(s.charAt(i))-1);
-	            if(count == 0){
-	                //now we increase j until we reach smaller substring
-	                while(true){
-	                    if(map.containsKey(s.charAt(j))){
-	                        if(map.get(s.charAt(j)) == 0)break;
-	                        map.put(s.charAt(j), map.get(s.charAt(j))+1);
-	                    }
-	                    j++;
-	                }
-	                int length = i - j + 1;
-	                if(length < minLength){
-	                    minLength = length;
-	                    idx1 = j;
-	                    idx2 = i;
-	                }
-	            }
-	        }
-	    }
-	    if(idx1 == -1)return "-1";
-	    return s.substring(idx1, idx2+1);
-	}
+class Solution {
+    public String minWindow(String s, String t) {
+        int i = 0, j = 0;
+        Map<Character, Integer> map = new HashMap<>();
+        
+        for(int x = 0; x < t.length(); x++){
+            if(!map.containsKey(t.charAt(x)))map.put(t.charAt(x), 1);
+            else map.put(t.charAt(x), map.get(t.charAt(x))+1);
+        }
+        int count = t.length(), minLength = Integer.MAX_VALUE, idx1 = -1, idx2 = -1;
+        while(j < s.length()){
+            
+            if(map.containsKey(s.charAt(j))){
+                if(map.get(s.charAt(j)) > 0)count--;
+                map.put(s.charAt(j), map.get(s.charAt(j))-1);
+            }
+            if(count == 0){
+                while(i <= j){
+                    if(map.containsKey(s.charAt(i))){
+                        if(map.get(s.charAt(i)) == 0)break;
+                        map.put(s.charAt(i), map.get(s.charAt(i))+1);
+                    }
+                    i++;
+                }
+            }
+            if(count == 0 && maxLength > j - i + 1){
+                minLength = j - i + 1;
+                idx1 = i;
+                idx2 = j;
+            }
+            j++;
+        }
+        return idx1 == -1?"": s.substring(idx1, idx2+1);
+    }
 }
