@@ -1,4 +1,4 @@
-https://leetcode.com/problems/network-delay-time/
+// https://leetcode.com/problems/network-delay-time/
 class Solution {
     public int networkDelayTime(int[][] times, int N, int K) {
         PriorityQueue<int[]> queue = new PriorityQueue<>(new Comparator<int[]>(){
@@ -22,6 +22,7 @@ class Solution {
         Arrays.fill(dist, 10000000);
         
         dist[K] = 0;
+        boolean[] vis = new boolean[N+1];
         
         queue.add(new int[]{K, 0});
         
@@ -29,11 +30,15 @@ class Solution {
             int[] poll = queue.poll();
             int u = poll[0];
             
+            if(vis[u])continue;
+            vis[u] = true;
+            
             if(map.containsKey(u)){
                 for(int v: map.get(u).keySet()){
-                    if(dist[v] > dist[u] + map.get(u).get(v)){
-                        dist[v] = dist[u] + map.get(u).get(v);
-                        queue.add(new int[]{v, map.get(u).get(v)});
+                    int w = map.get(u).get(v);
+                    if(dist[v] > dist[u] + w){
+                        dist[v] = dist[u] + w;
+                        queue.add(new int[]{v, dist[v]});
                     }
                 }
             }
