@@ -52,8 +52,12 @@ class GFG {
 	        }
 	    }
 	    int[][] moves = {{1, 0}, {0, 1}, {-1, 0}, {0, -1}};
+	    boolean[][] vis = new boolean[a.length][a[0].length];
 	    while(queue.size() != 0){
 	        int[] poll = queue.poll();
+	        
+	        if(vis[poll[0]][poll[1]])continue;
+	        vis[poll[0]][poll[1]] = true;
 	        
 	        for(int[] move: moves){
 	            int r2 = poll[0] + move[0];
