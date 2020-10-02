@@ -34,38 +34,37 @@ class Solution {
         int length = 0;
         
         for(int i = left; i >= 0; i--){
-            int idx = binarySearch(arr, right, arr.length-1, arr[i]);
+            int idx = binarySearch(arr, right, arr.length-1, arr[i], false);
             if(idx == -1)length = Math.max(length, i+1);
             else length = Math.max(length, i+1+arr.length-idx);
         }
         for(int i = right; i < arr.length; i++){
-            int idx = binarySearch2(arr, 0, left, arr[i]);
+            int idx = binarySearch(arr, 0, left, arr[i], true);
             if(idx == -1)length = Math.max(length, arr.length-i);
             else length = Math.max(length, idx+1+arr.length-i);
         }
         return arr.length-length;
     }
-    public int binarySearch(int[] arr, int low, int high, int val){
+    public int binarySearch(int[] arr, int low, int high, int val, boolean flag){
         int idx = -1;
         while(low <= high){
             int mid = (low + high)/2;
-            if(arr[mid] >= val){
-                idx = mid;
-                high = mid-1;
+            
+            if(!flag){
+                if(arr[mid] >= val){
+                    idx = mid;
+                    high = mid-1;
+                }
+                else low = mid+1;
             }
-            else low = mid+1;
-        }
-        return idx;
-    }
-    public int binarySearch2(int[] arr, int low, int high, int val){
-        int idx = -1;
-        while(low <= high){
-            int mid = (low + high)/2;
-            if(arr[mid] <= val){
-                idx = mid;
-                low = mid+1;
+            
+            else{
+                if(arr[mid] <= val){
+                    idx = mid;
+                    low = mid+1;
+                }
+                else high = mid-1;
             }
-            else high = mid-1;
         }
         return idx;
     }
