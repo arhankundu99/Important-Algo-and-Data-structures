@@ -5,6 +5,7 @@ More Problems: <br />
 <https://www.geeksforgeeks.org/print-all-the-cycles-in-an-undirected-graph/> <br />
 <https://www.geeksforgeeks.org/minimum-edges-required-to-make-a-directed-graph-strongly-connected/> minimum number of directed edges to add to make a directed graph strongly connected <br/>
 <https://www.geeksforgeeks.org/minimum-edges-to-be-added-in-a-directed-graph-so-that-any-node-can-be-reachable-from-a-given-node/> Minimum edges to be added in a directed graph so that any node can be reachable from a given node <br/>
+<https://www.hackerearth.com/problem/algorithm/strategic-warehouse-placements/> <https://www.hackerearth.com/submission/47759907/>
 
 ## DFS vs BFS
 
