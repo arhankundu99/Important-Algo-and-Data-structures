@@ -1,3 +1,4 @@
+Height Balanced Trees: [AVL Trees](https://www.geeksforgeeks.org/avl-tree-set-1-insertion/)
 ##### DO NOT FORGET THE CORNER CASES WHILE SOLVING A TREE PROBLEM like if node is null or node is a leaf node
 
 ## BST
