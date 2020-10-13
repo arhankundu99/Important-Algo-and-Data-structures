@@ -1,4 +1,68 @@
-Height Balanced Trees: [AVL Trees](https://www.geeksforgeeks.org/avl-tree-set-1-insertion/)
+Height Balanced Trees: [AVL Trees](https://www.geeksforgeeks.org/avl-tree-set-1-insertion/) <br/>
+[Practice Link](https://practice.geeksforgeeks.org/problems/avl-tree-insertion/1)
+```java
+class Sol
+{
+    public  Node insertToAVL(Node node,int data)
+    {
+        if(node == null)return new Node(data);
+        
+        if(node.data < data)node.right = insertToAVL(node.right, data);
+        else if(node.data > data)node.left = insertToAVL(node.left, data);
+        else return node;
+        
+        int balance = getBalance(node);
+        
+        //LL case
+        if(balance > 1 && data < node.left.data){
+            return rightRotate(node);
+        }
+        
+        //RR case
+        if(balance < -1 && data > node.right.data){
+            return leftRotate(node);
+        }
+        
+        //LR case
+        if(balance > 1 && data > node.left.data){
+            node.left = leftRotate(node.left);
+            return rightRotate(node);
+        }
+        
+        //RL case
+        if(balance < -1 && data < node.right.data){
+            node.right = rightRotate(node.right);
+            return leftRotate(node);
+        }
+        return node;
+    }
+    public Node leftRotate(Node x){
+        Node y = x.right;
+        Node z = y.left;
+        
+        y.left = x;
+        x.right = z;
+        
+        return y;
+    }
+    public Node rightRotate(Node x){
+        Node y = x.left;
+        Node z = y.right;
+        
+        y.right = x;
+        x.left = z;
+        
+        return y;
+    }
+    public int height(Node node){
+        if(node == null)return 0;
+        return 1 + Math.max(height(node.left), height(node.right));
+    }
+    public int getBalance(Node node){
+        return height(node.left) - height(node.right);
+    }
+}    
+```
 ##### DO NOT FORGET THE CORNER CASES WHILE SOLVING A TREE PROBLEM like if node is null or node is a leaf node
 
 ## BST
