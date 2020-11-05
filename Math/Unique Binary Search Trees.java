@@ -11,3 +11,4 @@ class Solution {
         return catalan[n];
     }
 }
+//See this for explanation: https://leetcode.com/problems/unique-binary-search-trees/discuss/703049/Python-Math-oneliner-O(n)-using-Catalan-number-explained
