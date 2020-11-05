@@ -12,3 +12,13 @@ Merge Sort
 
 ## Proof of building a heap in O(n)
 ![Proof of building a heap in O(n)](https://github.com/arhankundu99/Competetive-Coding/blob/master/miscellaneous/Sorting/Heap%20in%20O(n).jpeg) <br/>
+
+## Binary Heap vs BST
+NOTE: The time complexities below are worst case complexities
+1) **Searching**: BST takes O(n) time, AVL takes O(logn) time, Heap takes O(n) time
+2) **Creation**: Creation of BST O(n^2), AVL takes O(nlogn) time, Heap takes O(n) time as discussed above.
+3) **Finding Maximum or minimum element**: BST takes O(n) time, AVL takes O(logn) time, Heap takes O(1) time
+
+Usages: 
+1) BST is used in searching algorithms, inorder travarsal gives elements in sorted order, They can be used to represent arithmetic expressions ![Refer this](https://en.wikipedia.org/wiki/Binary_expression_tree). 
+2) Heap is used in many algorithms like **Dijkstra**, **Prims**, **Heap Sort**, Finding maximum or minimum element in O(1), Priority Queue etc.
