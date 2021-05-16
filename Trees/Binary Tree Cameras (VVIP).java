@@ -30,7 +30,7 @@ class Solution {
         int right = dfs(root.right);
         
         if(left == 0 && right == 0){
-            //this means both root.left and root.right are covered. therefore root needs camera camera coverage
+            //this means both root.left and root.right are covered. therefore root needs camera coverage
             return -1;
         }
         if(left == -1 || right == -1){
