@@ -43,3 +43,28 @@ class Solution {
         
     }
 }
+
+class Solution {
+    public int minCameraCover(TreeNode root) {
+        int[] arr = dfs(root);
+        return Math.min(arr[1], arr[2]);
+    }
+    //three states
+    //state1: All nodes below root are covered, except this one
+    //state2: All nodes below root and including root are covered and no camera in root
+    //state3: All nodes below root and including root are covered and there is camera in the root
+    
+    public int[] dfs(TreeNode root){
+        if(root == null){
+            return new int[]{0, 0, 99999};
+        }
+        int[] left = dfs(root.left);
+        int[] right = dfs(root.right);
+        
+        int s1 = left[1] + right[1];
+        int s2 = Math.min(left[2] + Math.min(right[1], right[2]), right[2] + Math.min(left[1], left[2]));
+        int s3 = 1 + Math.min(left[0], Math.min(left[1], left[2])) + Math.min(right[0], Math.min(right[1], right[2]));
+                      
+        return new int[]{s1, s2, s3};             
+    }
+}
