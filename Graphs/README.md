@@ -14,6 +14,11 @@ More Problems: <br />
 3. Both have same time complexity: O(V+E)
 4. BFS is slower than DFS.
 
+For example, given a family tree if one were looking for someone on the tree who’s still alive, then it would be safe to assume that person would be on the bottom of the tree. This means that a BFS would take a very long time to reach that last level. A DFS, however, would find the goal faster. But, if one were looking for a family member who died a very long time ago, then that person would be closer to the top of the tree. Then, a BFS would usually be faster than a DFS. So, the advantages of either vary depending on the data and what you’re looking for.
+
+One more example is Facebook; Suggestion on Friends of Friends. We need immediate friends for suggestion where we can use BFS.
+<https://stackoverflow.com/questions/3332947/when-is-it-practical-to-use-depth-first-search-dfs-vs-breadth-first-search-bf>
+
 <https://www.geeksforgeeks.org/cycles-of-length-n-in-an-undirected-and-connected-graph/> <br/>
 To find cycles of length n: use dfs and find the paths of length n-1. if the current vertex has an edge with the starting vertex, then increment count
 
