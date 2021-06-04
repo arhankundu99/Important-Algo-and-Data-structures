@@ -19,6 +19,11 @@ For example, given a family tree if one were looking for someone on the tree who
 One more example is Facebook; Suggestion on Friends of Friends. We need immediate friends for suggestion where we can use BFS.
 <https://stackoverflow.com/questions/3332947/when-is-it-practical-to-use-depth-first-search-dfs-vs-breadth-first-search-bf>
 
+BFS considers all neighbors first and therefore not suitable for decision making trees used in games or puzzles.	
+DFS is more suitable for game or puzzle problems. We make a decision, then explore all paths through this decision. And if this decision leads to win situation, we stop.
+
+<https://www.geeksforgeeks.org/difference-between-bfs-and-dfs/>
+
 <https://www.geeksforgeeks.org/cycles-of-length-n-in-an-undirected-and-connected-graph/> <br/>
 To find cycles of length n: use dfs and find the paths of length n-1. if the current vertex has an edge with the starting vertex, then increment count
 
