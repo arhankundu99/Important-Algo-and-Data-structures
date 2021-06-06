@@ -10,9 +10,10 @@ More Problems: <br />
 ## DFS vs BFS
 
 1. DFS uses stack to traverse the graph and BFS uses queue to traverse the graph.
-2. DFS is used in decision making problems and BFS can be used to find shortest distance in an unweighted graph.
-3. Both have same time complexity: O(V+E)
-4. BFS is slower than DFS.
+2. In BFS, we traverse the graph level by level. In DFS, The algorithm starts at the source node and we explore as far as possible along each branch before backtracking.
+3. DFS is used in decision making problems and BFS can be used to find shortest distance in an unweighted graph.
+4. Both have same time complexity: O(V+E)
+5. BFS is slower than DFS.
 
 Using BFS and DFS, we can find the shortest path (Unweighted graph). But using BFS, we can achieve this in less time than DFS.
 
