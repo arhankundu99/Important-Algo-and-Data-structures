@@ -1,5 +1,6 @@
-https://leetcode.com/problems/partition-to-k-equal-sum-subsets/
-Time: O(k^n)
+//https://leetcode.com/problems/partition-to-k-equal-sum-subsets/
+//Time: O(k*2^n) For each subset we are iterating from nums[0....nums.length - 1] and we have 2 choices: we pick a number or dont pick a number => 2^n
+// since we do this k times, time complexity is O(k * 2^n)
 
 class Solution {
     public boolean canPartitionKSubsets(int[] nums, int k) {
