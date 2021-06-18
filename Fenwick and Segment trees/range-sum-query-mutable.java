@@ -3,67 +3,71 @@
 
 class NumArray {
 
-    segmentTree tree;
+    segmentTree segmentTree;
+    int low, high, node;
     int[] nums;
     public NumArray(int[] nums) {
-        tree = new segmentTree(nums.length);
-        if(nums.length != 0)tree.generateTree(0, nums.length-1, nums, 0);
+        segmentTree = new segmentTree(nums.length);
         this.nums = nums;
+        low = 0;
+        high = nums.length - 1;
+        node = 0;
+        segmentTree.build(low, high, node, nums);
     }
     
-    public void update(int i, int val) {
-        tree.update(0, nums.length-1, nums, 0, i, val);
+    public void update(int idx, int val) {
+        segmentTree.update(low, high, node, nums, idx, val);
     }
     
-    public int sumRange(int i, int j) {
-        return tree.sumRange(0, nums.length-1, nums, i, j, 0);
+    public int sumRange(int left, int right) {
+        return segmentTree.sumRange(low, high, node, nums, left, right);
     }
 }
 class segmentTree{
-    int[] tree;
-    public segmentTree(int n){
+    private int[] tree;
+    segmentTree(int n){
         tree = new int[4*n];
     }
-    void generateTree(int left, int right, int[] nums, int node){
-        if(left == right){
-            tree[node] = nums[left];
+    void build(int low, int high, int node, int[] nums){
+        if(low > high)return;
+        if(low == high){
+            tree[node] = nums[low];
             return;
         }
-        int mid = (left + right)/2;
-        generateTree(left, mid, nums, 2*node+1);
-        generateTree(mid+1, right, nums, 2*node+2);
         
-        tree[node] = tree[2*node+1] + tree[2*node+2];
+        int mid = (low + high) / 2;
+        
+        build(low, mid, 2 * node + 1, nums);
+        build(mid + 1, high, 2 * node + 2, nums);
+        
+        tree[node] = tree[2 * node + 1] + tree[2 * node + 2];
     }
-    void update(int left, int right, int[] nums, int node, int idx, int val)
-    {
-        if(left == right){
+    void update(int low, int high, int node, int[] nums, int idx, int val){
+        if(low > high)return;
+        if(low == high){
             tree[node] = val;
             return;
         }
-        int mid = (left + right)/2;
-        if(idx <= mid)update(left, mid, nums, 2*node+1, idx, val);
-        else update(mid+1, right, nums, 2*node+2, idx, val);
         
-        tree[node] = tree[2*node+1] + tree[2*node+2];
+        int mid = (low + high) / 2;
+        if(idx <= mid)update(low, mid, 2 * node + 1, nums, idx, val);
+        else update(mid + 1, high, 2 * node + 2, nums, idx, val);
+        
+        tree[node] = tree[2 * node + 1] + tree[2 * node + 2];
     }
-    int sumRange(int left, int right, int[] nums, int i, int j, int node)
-    {
-        // given range completely overlaps with the interval
-        if(i <= left && j >= right)return tree[node];
+    int sumRange(int low, int high, int node, int[] nums, int left, int right){
+        if(low > high)return 0;
         
-        //given range has no intersection with the interval
-        if(j < left || i > right)return 0;
+        //case1 left <= low <= high <= right
+        if(low >= left && right >= high)return tree[node];
         
-        //given range has partial intersection with the interval
-        int mid = (left + right)/2;
-        return sumRange(left, mid, nums, i, j, 2*node+1) + sumRange(mid+1, right, nums, i, j, 2*node+2);
+        //case2 right < low or left > high
+        if(right < low || left > high)return 0;
+        
+        int mid = (low + high) / 2;
+        
+        return sumRange(low, mid, 2 * node + 1, nums, left, right) + 
+               sumRange(mid + 1, high, 2 * node + 2, nums, left, right);
+        
     }
 }
-
-/**
- * Your NumArray object will be instantiated and called as such:
- * NumArray obj = new NumArray(nums);
- * obj.update(i,val);
- * int param_2 = obj.sumRange(i,j);
- */
