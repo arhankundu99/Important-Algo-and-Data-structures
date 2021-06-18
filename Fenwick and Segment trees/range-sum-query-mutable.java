@@ -3,9 +3,9 @@
 
 class NumArray {
 
-    segmentTree segmentTree;
-    int low, high, node;
-    int[] nums;
+    private segmentTree segmentTree;
+    private int low, high, node;
+    private int[] nums;
     public NumArray(int[] nums) {
         segmentTree = new segmentTree(nums.length);
         this.nums = nums;
