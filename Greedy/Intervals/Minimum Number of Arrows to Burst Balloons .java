@@ -6,7 +6,6 @@ class Solution {
         Arrays.sort(points, new Comparator<int[]>(){
             public int compare(int[] a, int[] b){
                 if(a[1] > b[1])return 1;
-                if(a[1] == b[1])return 0;
                 return -1;
             }
         });
