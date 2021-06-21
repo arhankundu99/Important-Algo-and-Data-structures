@@ -172,7 +172,7 @@ class Solution {
 }
 ```
 Time Complexity Analysis:
-`
+```
 Doubt in the analysis. somw websites and even wikipedia has the time complexity of (V + E)logV, and some has the time complexity of O(V + ElogE)
 1:
 The queue can contain a maximum of |E| elements. No edge is processed twice because of the visited array. Time complexity for adding or removing an element from queue would be O(LogE).
@@ -185,5 +185,5 @@ size(Q) + size(Q)log(size(Q)) + size(Q)E(avg) + size(Q)Eavglog(size(Q))
 V + VlogV + VEavg + VEavglogV
 V + VlogV + E + ElogV
 (V + E)logV
-`
+```
   
