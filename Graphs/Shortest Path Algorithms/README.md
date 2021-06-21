@@ -171,6 +171,8 @@ class Solution {
     }
 }
 ```
+NOTE: Dijkstra algorithm DOES NOT work for negative edges because we have a visited array and the visited array will restrict any node to be processed more than once. If we remove the visited array, the algorithm will work for negative edges (NOTE: I am not talking about negative cycles) But the time complexity will no longer be O((V + E)logV) because the each node will be processed many times before finding the shortest distance.
+
 Time Complexity Analysis:
 ```
 Doubt in the analysis. somw websites and even wikipedia has the time complexity of (V + E)logV, and some has the time complexity of O(V + ElogE)
