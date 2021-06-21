@@ -119,136 +119,71 @@ Best Case : O(E)
 It can be used in case of negative edge weigths and it can also be used to detect cycle in a graph.
 
 ## Dijkstra
+<https://leetcode.com/problems/network-delay-time/>
 ```java
-// Java implementation of Dijkstra's Algorithm  
-// using Priority Queue 
-import java.util.*; 
-public class DPQ { 
-    private int dist[]; 
-    private Set<Integer> settled; 
-    private PriorityQueue<Node> pq; 
-    private int V; // Number of vertices 
-    List<List<Node> > adj; 
-  
-    public DPQ(int V) 
-    { 
-        this.V = V; 
-        dist = new int[V]; 
-        settled = new HashSet<Integer>(); 
-        pq = new PriorityQueue<Node>(V, new Node()); 
-    } 
-  
-    // Function for Dijkstra's Algorithm 
-    public void dijkstra(List<List<Node> > adj, int src) 
-    { 
-        this.adj = adj; 
-  
-        for (int i = 0; i < V; i++) 
-            dist[i] = Integer.MAX_VALUE; 
-  
-        // Add source node to the priority queue 
-        pq.add(new Node(src, 0)); 
-  
-        // Distance to the source is 0 
-        dist[src] = 0; 
-        while (settled.size() != V) { 
-  
-            // remove the minimum distance node  
-            // from the priority queue  
-            int u = pq.remove().node; 
-  
-            // adding the node whose distance is 
-            // finalized 
-            settled.add(u); 
-  
-            e_Neighbours(u); 
-        } 
-    } 
-  
-    // Function to process all the neighbours  
-    // of the passed node 
-    private void e_Neighbours(int u) 
-    { 
-        int edgeDistance = -1; 
-        int newDistance = -1; 
-  
-        // All the neighbors of v 
-        for (int i = 0; i < adj.get(u).size(); i++) { 
-            Node v = adj.get(u).get(i); 
-  
-            // If current node hasn't already been processed 
-            if (!settled.contains(v.node)) { 
-                edgeDistance = v.cost; 
-                newDistance = dist[u] + edgeDistance; 
-  
-                // If new distance is cheaper in cost 
-                if (newDistance < dist[v.node]) 
-                    dist[v.node] = newDistance; 
-  
-                // Add the current node to the queue 
-                pq.add(new Node(v.node, dist[v.node])); 
-            } 
-        } 
-    } 
-  
-    // Driver code 
-    public static void main(String arg[]) 
-    { 
-        int V = 5; 
-        int source = 0; 
-  
-        // Adjacency list representation of the  
-        // connected edges 
-        List<List<Node> > adj = new ArrayList<List<Node> >(); 
-  
-        // Initialize list for every node 
-        for (int i = 0; i < V; i++) { 
-            List<Node> item = new ArrayList<Node>(); 
-            adj.add(item); 
-        } 
-  
-        // Inputs for the DPQ graph 
-        adj.get(0).add(new Node(1, 9)); 
-        adj.get(0).add(new Node(2, 6)); 
-        adj.get(0).add(new Node(3, 5)); 
-        adj.get(0).add(new Node(4, 3)); 
-  
-        adj.get(2).add(new Node(1, 2)); 
-        adj.get(2).add(new Node(3, 4)); 
-  
-        // Calculate the single source shortest path 
-        DPQ dpq = new DPQ(V); 
-        dpq.dijkstra(adj, source); 
-  
-        // Print the shortest path to all the nodes 
-        // from the source node 
-        System.out.println("The shorted path from node :"); 
-        for (int i = 0; i < dpq.dist.length; i++) 
-            System.out.println(source + " to " + i + " is "
-                               + dpq.dist[i]); 
-    } 
-} 
-  
-// Class to represent a node in the graph 
-class Node implements Comparator<Node> { 
-    public int node; 
-    public int cost; 
-  
-    public Node() 
-    { 
-    } 
-  
-    public Node(int node, int cost) 
-    { 
-        this.node = node; 
-        this.cost = cost; 
-    } 
-  
-    @Override
-    public int compare(Node node1, Node node2) 
-    { 
-        return node1.cost - node2.cost;
-    } 
-} 
+class Solution {
+    public int networkDelayTime(int[][] times, int N, int K) {
+        PriorityQueue<int[]> queue = new PriorityQueue<>(new Comparator<int[]>(){
+            public int compare(int[] a, int[] b){return a[1] - b[1];}
+        });
+        
+        Map<Integer, Map<Integer, Integer>> map = new HashMap<>();
+        
+        for(int[] time: times){
+            int u = time[0];
+            int v = time[1];
+            int w = time[2];
+            
+            if(!map.containsKey(u))map.put(u, new HashMap<>());
+            
+            map.get(u).put(v, w);
+        }
+        int[] dist = new int[N+1];
+        Arrays.fill(dist, 10000000);
+        
+        dist[K] = 0;
+        boolean[] vis = new boolean[N+1];
+        
+        queue.add(new int[]{K, 0});
+        
+        while(queue.size() != 0){
+            int[] poll = queue.poll();
+            int u = poll[0];
+            
+            if(vis[u])continue;
+            vis[u] = true;
+            
+            if(map.containsKey(u)){
+                for(int v: map.get(u).keySet()){
+                    int w = map.get(u).get(v);
+                    
+                    if(dist[v] > dist[u] + w){
+                        dist[v] = dist[u] + w;
+                        queue.add(new int[]{v, dist[v]});
+                    }
+                }
+            }
+        }
+        int delay = 0;
+        for(int i = 1; i <= N; i++)delay = Math.max(delay, dist[i]);
+        
+        return delay >= 10000000? -1: delay;
+    }
+}
 ```
+Time Complexity Analysis:
+`
+Doubt in the analysis. somw websites and even wikipedia has the time complexity of (V + E)logV, and some has the time complexity of O(V + ElogE)
+1:
+The queue can contain a maximum of |E| elements. No edge is processed twice because of the visited array. Time complexity for adding or removing an element from queue would be O(LogE).
+Therefore the complexity inside the while loop is O(ElogE). And the complexity before the while loop is O(V). Therefore the total complexity is O(V + ElogE).
+
+2:
+Q is the priority Queue
+size(Q) * (O(1) + log(size(Q)) + (E(avg) * (O(1) + log(size(Q)))))
+size(Q) + size(Q)log(size(Q)) + size(Q)E(avg) + size(Q)Eavglog(size(Q))
+V + VlogV + VEavg + VEavglogV
+V + VlogV + E + ElogV
+(V + E)logV
+`
   
