@@ -179,7 +179,9 @@ Doubt in the analysis. somw websites and even wikipedia has the time complexity 
 1:
 The queue can contain a maximum of |E| elements. No edge is processed twice because of the visited array. Time complexity for adding or removing an element from queue would be O(LogE).
 Therefore the complexity inside the while loop is O(ElogE). And the complexity before the while loop is O(V). Therefore the total complexity is O(V + ElogE).
-
+```
+O(V + ElogE) video: <https://www.youtube.com/watch?v=YMyO-yZMQ6g>
+```
 2:
 Q is the priority Queue
 size(Q) * (O(1) + log(size(Q)) + (E(avg) * (O(1) + log(size(Q)))))
