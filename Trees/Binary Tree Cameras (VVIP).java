@@ -20,8 +20,8 @@ class Solution {
         if(dfs(root) == -1)count++;
         return count;
     }
-    //return -1 if root needs a camera coverage
-    //return 0 if root does not need a camera
+    //return -1 if root has a camera coverage
+    //return 0 if root does not have a camera coverage
     //return 1 if root has a camera
     public int dfs(TreeNode root){
         if(root == null)return 0;
