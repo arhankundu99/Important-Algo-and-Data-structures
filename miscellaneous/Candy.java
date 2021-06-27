@@ -1,4 +1,5 @@
 // https://leetcode.com/explore/challenge/card/june-leetcoding-challenge-2021/606/week-4-june-22nd-june-28th/3793/
+// https://leetcode.com/problems/candy/solution/
 class Solution {
     public int candy(int[] ratings) {
         if(ratings.length == 1)return 1;
