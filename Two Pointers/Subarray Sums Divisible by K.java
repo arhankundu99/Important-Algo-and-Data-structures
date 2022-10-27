@@ -5,24 +5,24 @@
 // 2 <= K <= 10000
 
 class Solution {
-    public int subarraysDivByK(int[] A, int K) {
-        Map<Integer,Integer>map = new HashMap<>();
-        map.put(0,1);
-        int currSum = 0;
-        int ret = 0;
-        for(int i = 0;i < A.length;i++)
-        {
-            currSum=(currSum+A[i])%K;
-            if(currSum<0)currSum+=K;
-            if(map.containsKey(currSum))
-            {
-                ret+=map.get(currSum);
-                map.put(currSum,map.get(currSum)+1);
-            }
-            else map.put(currSum,1);
+    public int subarraysDivByK(int[] nums, int k) {
+        Map<Integer, Integer> map = new HashMap<>();
 
+        int sum = 0, count = 0;
+
+        map.put(0, 1);
+
+        for(int num: nums){
+            sum += num;
+            int rem = (((sum % k) + k) % k);
+            if(map.containsKey(rem)){
+                count += map.get(rem);
+            }
+
+            map.put(rem, map.getOrDefault(rem, 0) + 1);
         }
-        return ret;
+
+        return count;
     }
 }
 //Idea
