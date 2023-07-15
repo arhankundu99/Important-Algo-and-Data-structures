@@ -3,19 +3,33 @@
 class Solution {
     public int[] singleNumber(int[] nums) {
         int xor = 0;
-        
-        for(int num: nums)xor ^= num;
-        
-        //twos complement of a is -a;
-        
-        int rightMostBit = xor & (-xor);
-        
-        int a = 0;
-        
         for(int num: nums){
-            if((num & rightMostBit) == 0)continue;
-            a ^= num;
+            xor ^= num;
         }
-        return new int[]{a, xor ^ a};
+
+        int setBitPos = -1;
+        // at this bit, these 2 numbers are different
+        for(int i = 0; i < 32; i++){
+            if((xor & (1 << i)) != 0){
+                setBitPos = i;
+                break;
+            }
+        }
+
+        if(setBitPos == -1){
+            return new int[]{-1, -1};
+        }
+
+        int lastSetBit = (1 << setBitPos);
+
+        int p = 0, q = 0;
+        for(int num: nums){
+            if((num & lastSetBit) != 0){
+                p ^= num;
+            }
+            else q ^= num;
+        }
+
+        return new int[]{p, q};
     }
 }
