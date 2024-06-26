@@ -51,7 +51,7 @@ Refer:
 - [Stone Game VII](./Dynamic%20Programming/Game%20Stratergies/1690.%20Stone%20Game%20VII.java)
 
 
-Solve problems by `sorting` (When the problem says that a player can pick any idx for the array for their score)
+Solve problems by `sorting` (When the problem says that a player can pick any idx from the array for their score)
 
 Refer:
 - [Stone Game VI](./Dynamic%20Programming/Game%20Stratergies/1686.%20Stone%20Game%20VI.java)
