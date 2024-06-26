@@ -30,3 +30,33 @@ Refer solved problems [here](./Graphs/)
 Refer this post: https://leetcode.com/discuss/study-guide/2166045/line-sweep-algorithms
 
 Refer solved problems [here](./Line%20Sweep/)
+
+## Game theory
+
+Solve problems by keeping the state of the current player. (And we can also remove the current player state if we see that it is not used in the recursive function)
+
+Refer:
+- [Nim Game](./Dynamic%20Programming/Game%20Stratergies/292.%20Nim%20Game.java)
+- [Divisor Game](./Dynamic%20Programming/Game%20Stratergies/1025.%20Divisor%20Game.java)
+- [Stone Game IV](./Dynamic%20Programming/Game%20Stratergies/1510.%20Stone%20Game%20IV.java)
+
+
+Solve problems by the `Difference of scores method`
+
+Refer:
+- [Predict the winner](./Dynamic%20Programming/Game%20Stratergies/486.%20Predict%20the%20Winner.java)
+- [Stone Game I](./Dynamic%20Programming/Game%20Stratergies/877.%20Stone%20Game.java)
+- [Stone Game II](./Dynamic%20Programming/Game%20Stratergies/1140.%20Stone%20Game%20II.java)
+- [Stone Game III](./Dynamic%20Programming/Game%20Stratergies/1406.%20Stone%20Game%20III.java)
+- [Stone Game VII](./Dynamic%20Programming/Game%20Stratergies/1690.%20Stone%20Game%20VII.java)
+
+
+Solve problems by `sorting` (When the problem says that a player can pick any idx for the array for their score)
+
+Refer:
+- [Stone Game VI](./Dynamic%20Programming/Game%20Stratergies/1686.%20Stone%20Game%20VI.java)
+- [Maximum Number Of Coins You Can Get](./Dynamic%20Programming/Game%20Stratergies/1561.%20Maximum%20Number%20of%20Coins%20You%20Can%20Get.java)
+
+
+Refer solved problems [here](./Dynamic%20Programming/Game%20Stratergies/)
+
