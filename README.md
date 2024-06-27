@@ -60,3 +60,9 @@ Refer:
 
 Refer solved problems [here](./Dynamic%20Programming/Game%20Stratergies/)
 
+## Priority queue
+
+Refer this post: https://leetcode.com/discuss/study-guide/1360400/priority-queue-problems-to-practice
+
+Refer solved problems [here](./Priority%20Queue/)
+
