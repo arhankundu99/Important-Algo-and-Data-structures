@@ -26,6 +26,10 @@ Refer this post: https://leetcode.com/discuss/study-guide/1326900/graph-algorith
 
 Refer solved problems [here](./Graphs/)
 
+For 2d points, consider using indexes in adjacency map (Refer [Detonate the Maximum Bombs](./Graphs/2101.%20Detonate%20the%20Maximum%20Bombs.java))
+
+Refer [Longest Increasing Path In a Metrix](./Graphs/Longest%20path%20in%20a%20directed%20Acyclic%20graph.java)
+
 ## Line Sweep
 Refer this post: https://leetcode.com/discuss/study-guide/2166045/line-sweep-algorithms
 
