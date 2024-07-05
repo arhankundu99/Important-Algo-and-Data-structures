@@ -28,7 +28,7 @@ Refer solved problems [here](./Graphs/)
 
 For 2d points, consider using indexes in adjacency map (Refer [Detonate the Maximum Bombs](./Graphs/2101.%20Detonate%20the%20Maximum%20Bombs.java))
 
-Refer [Longest Increasing Path In a Metrix](./Graphs/Longest%20path%20in%20a%20directed%20Acyclic%20graph.java)
+Refer [Longest Increasing Path In a Matrix](./Graphs/Longest%20path%20in%20a%20directed%20Acyclic%20graph.java)
 
 ## Line Sweep
 Refer this post: https://leetcode.com/discuss/study-guide/2166045/line-sweep-algorithms
@@ -55,7 +55,7 @@ Refer:
 - [Stone Game VII](./Dynamic%20Programming/Game%20Stratergies/1690.%20Stone%20Game%20VII.java)
 
 
-Solve problems by `sorting` (When the problem says that a player can pick any idx from the array for their score)
+Solve problems by `sorting and greedy approach` (When the problem says that a player can pick any idx from the array for their score). 
 
 Refer:
 - [Stone Game VI](./Dynamic%20Programming/Game%20Stratergies/1686.%20Stone%20Game%20VI.java)
