@@ -28,7 +28,10 @@ Refer solved problems [here](./Graphs/)
 
 For 2d points, consider using indexes in adjacency map (Refer [Detonate the Maximum Bombs](./Graphs/2101.%20Detonate%20the%20Maximum%20Bombs.java))
 
-Refer [Longest Increasing Path In a Matrix](./Graphs/Longest%20path%20in%20a%20directed%20Acyclic%20graph.java)
+Some more important problems
+- [Longest Increasing Path In a Matrix](./Graphs/Longest%20path%20in%20a%20directed%20Acyclic%20graph.java)
+- [Maximum Score of a Node Sequence](./Graphs/2242.%20Maximum%20Score%20of%20a%20Node%20Sequence.java)
+- [Alien Dictionary](./Graphs/Alien%20Dictionary.java)
 
 ## Line Sweep
 Refer this post: https://leetcode.com/discuss/study-guide/2166045/line-sweep-algorithms
@@ -69,4 +72,11 @@ Refer solved problems [here](./Dynamic%20Programming/Game%20Stratergies/)
 Refer this post: https://leetcode.com/discuss/study-guide/1360400/priority-queue-problems-to-practice
 
 Refer solved problems [here](./Priority%20Queue/)
+
+## Rate limiting
+
+Refer these posts
+
+- [Fixed Window Counter and Sliding Window Log](https://medium.com/@devenchan/implementing-rate-limiting-in-java-from-scratch-fixed-window-and-sliding-window-implementation-a6e8d6407d17)
+- [Leaky Bucket and Token Bucket](https://medium.com/@devenchan/implementing-rate-limiting-in-java-from-scratch-leaky-bucket-and-tokenn-bucket-implementation-63a944ba93aa)
 
