@@ -20,6 +20,8 @@ Tip: Whenever we have some problems which tells to find `minimised max answer`, 
 Reference problems:
 1. [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/description/)
 2. [Divide Chocolate](https://leetcode.ca/all/1231.html)
+3. [Length of LIS](https://leetcode.com/problems/longest-increasing-subsequence)
+4. [Russian Doll Envelopes](https://leetcode.com/problems/russian-doll-envelopes/)
 
 ## Graphs
 Refer this post: https://leetcode.com/discuss/study-guide/1326900/graph-algorithms-problems-to-practice
