@@ -35,6 +35,27 @@ Some more important problems
 - [Maximum Score of a Node Sequence](./Graphs/2242.%20Maximum%20Score%20of%20a%20Node%20Sequence.java)
 - [Alien Dictionary](./Graphs/Alien%20Dictionary.java)
 
+### DSU complexity analysis
+
+In union method, why do we set the parent which has greater size?
+```
+Let's say we have 2 nodes x and y in the union method
+
+We find the parent and note down the sizes of the groups which have x and y.
+
+Suppose the height of group containing x is heightX and similarly for y, it is heightY.
+
+Case 1: heightX > heightY
+If we attach node x to node y, the height would become heightX + 1
+
+But if we attach node y to node x, the height would be height X 
+
+So we attach node y to node x.
+
+Case 2: heightX = heightY
+In this case, the height of the resultant set would be heightX + 1
+```
+
 ## Line Sweep
 Refer this post: https://leetcode.com/discuss/study-guide/2166045/line-sweep-algorithms
 
@@ -74,6 +95,16 @@ Refer solved problems [here](./Dynamic%20Programming/Game%20Stratergies/)
 Refer this post: https://leetcode.com/discuss/study-guide/1360400/priority-queue-problems-to-practice
 
 Refer solved problems [here](./Priority%20Queue/)
+
+## Segment tree
+
+Refer this youtube link: [Range Sum Query](https://www.youtube.com/watch?v=dUkRI0R3sg8)
+
+Refer these problems:
+
+- [Count of Smaller Numbers After Self](./Fenwick%20and%20Segment%20trees/315.%20Count%20of%20Smaller%20Numbers%20After%20Self.java)
+- [Range Sum Query](./Fenwick%20and%20Segment%20trees/range-sum-query-mutable.java)
+
 
 ## Rate limiting
 
