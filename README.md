@@ -22,6 +22,7 @@ Reference problems:
 2. [Divide Chocolate](https://leetcode.ca/all/1231.html)
 3. [Length of LIS](https://leetcode.com/problems/longest-increasing-subsequence)
 4. [Russian Doll Envelopes](https://leetcode.com/problems/russian-doll-envelopes/)
+5. [Find Indices of Ones](./Binary%20Search/FindIndicesOfOnes.java)
 
 ## Graphs
 Refer this post: https://leetcode.com/discuss/study-guide/1326900/graph-algorithms-problems-to-practice
@@ -34,6 +35,8 @@ Some more important problems
 - [Longest Increasing Path In a Matrix](./Graphs/Longest%20path%20in%20a%20directed%20Acyclic%20graph.java)
 - [Maximum Score of a Node Sequence](./Graphs/2242.%20Maximum%20Score%20of%20a%20Node%20Sequence.java)
 - [Alien Dictionary](./Graphs/Alien%20Dictionary.java)
+- [Maximum Number Of Invitations](./Graphs/Maximum%20Number%20Of%20Invitations%20to%20a%20Party.java)
+- [String Replacement Library](./Graphs/StringReplacementLibrary.java)
 
 ### DSU complexity analysis
 
@@ -60,6 +63,9 @@ In this case, the height of the resultant set would be heightX + 1
 Refer this post: https://leetcode.com/discuss/study-guide/2166045/line-sweep-algorithms
 
 Refer solved problems [here](./Line%20Sweep/)
+
+Some important problems
+- [On Call Rotation Schedule](./Line%20Sweep/OnCallRotationSchedule.java)
 
 ## Game theory
 
@@ -96,6 +102,11 @@ Refer this post: https://leetcode.com/discuss/study-guide/1360400/priority-queue
 
 Refer solved problems [here](./Priority%20Queue/)
 
+Some important problems
+- [Reorganise Strings](./Priority%20Queue/767.%20Reorganize%20String.java)
+- [Time for turn](./Priority%20Queue/Time%20for%20turn.java)
+- [Median in data stream](./Priority%20Queue/295.%20Find%20Median%20from%20Data%20Stream.java)
+
 ## Segment tree
 
 Refer this youtube link: [Range Sum Query](https://www.youtube.com/watch?v=dUkRI0R3sg8)
@@ -105,6 +116,13 @@ Refer these problems:
 - [Count of Smaller Numbers After Self](./Fenwick%20and%20Segment%20trees/315.%20Count%20of%20Smaller%20Numbers%20After%20Self.java)
 - [Range Sum Query](./Fenwick%20and%20Segment%20trees/range-sum-query-mutable.java)
 
+## Tries
+
+Refer solved problems [here](./Tries/)
+
+Some important problems
+
+- [Find Selected Directories](./Tries/Find%20Selected%20Directories.java)
 
 ## Rate limiting
 
