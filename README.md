@@ -41,6 +41,11 @@ Some more important problems
 ### DSU complexity analysis
 
 In union method, why do we set the parent which has greater size?
+
+Refer these links
+- https://cs.stackexchange.com/questions/82728/in-disjoint-sets-why-do-we-make-the-smaller-tree-the-subtree-of-the-larger-one
+
+- https://stackoverflow.com/questions/53149097/why-is-the-time-complexity-of-performing-n-union-find-union-by-size-operations
 ```
 Let's say we have 2 nodes x and y in the union method
 
@@ -66,6 +71,8 @@ Refer solved problems [here](./Line%20Sweep/)
 
 Some important problems
 - [On Call Rotation Schedule](./Line%20Sweep/OnCallRotationSchedule.java)
+- [Non overlapping intervals](https://leetcode.com/problems/non-overlapping-intervals/description/) (Sort by end time)
+- [Remove covered intervals](https://leetcode.com/problems/remove-covered-intervals/) (Sort by start time and then by end time in descending order)
 
 ## Game theory
 
