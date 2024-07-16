@@ -75,6 +75,7 @@ Refer:
 - [Nim Game](./Dynamic%20Programming/Game%20Stratergies/292.%20Nim%20Game.java)
 - [Divisor Game](./Dynamic%20Programming/Game%20Stratergies/1025.%20Divisor%20Game.java)
 - [Stone Game IV](./Dynamic%20Programming/Game%20Stratergies/1510.%20Stone%20Game%20IV.java)
+- [Babylon](./Dynamic%20Programming/Game%20Stratergies/Babylon.java)
 
 
 Solve problems by the `Difference of scores method`
@@ -105,6 +106,7 @@ Refer solved problems [here](./Priority%20Queue/)
 Some important problems
 - [Reorganise Strings](./Priority%20Queue/767.%20Reorganize%20String.java)
 - [Time for turn](./Priority%20Queue/Time%20for%20turn.java)
+- [Single threaded CPU](./Priority%20Queue/1834.%20Single-Threaded%20CPU.java)
 - [Median in data stream](./Priority%20Queue/295.%20Find%20Median%20from%20Data%20Stream.java)
 
 ## Segment tree
@@ -123,6 +125,15 @@ Refer solved problems [here](./Tries/)
 Some important problems
 
 - [Find Selected Directories](./Tries/Find%20Selected%20Directories.java)
+
+## TreeMap / TreeSet
+
+Refer solved problems [here](./TreeMap/) 
+
+Some important problems
+
+- [Find triplets](./TreeMap/Find%20triplets.java)
+- [Amount of new area painted each day](./TreeMap/2158.%20Amount%20of%20New%20Area%20Painted%20Each%20Day.java)
 
 ## Rate limiting
 
