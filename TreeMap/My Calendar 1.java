@@ -1,18 +1,29 @@
 // https://leetcode.com/explore/challenge/card/june-leetcoding-challenge-2021/604/week-2-june-8th-june-14th/3774/
 class MyCalendar {
-    TreeMap<Integer, Integer> map;
+    TreeMap<Integer, Integer> line;
     public MyCalendar() {
-        map = new TreeMap<>();
+        line = new TreeMap<>();
     }
     
     public boolean book(int start, int end) {
-        Integer prev = map.floorKey(start);
-        Integer next = map.ceilingKey(start);
-        
-        if((prev == null || map.get(prev) <= start) && (next == null || next >= end)){
-            map.put(start, end);
-            return true;
+        Integer previous = line.floorKey(start);
+        Integer next = line.ceilingKey(start);
+
+        if (previous != null && start < line.get(previous)) {
+            return false;
         }
-        return false;
+
+        if (next != null && end > next) {
+            return false;
+        }
+
+        line.put(start, end);
+        return true;
     }
 }
+
+/**
+ * Your MyCalendar object will be instantiated and called as such:
+ * MyCalendar obj = new MyCalendar();
+ * boolean param_1 = obj.book(start,end);
+ */

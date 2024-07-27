@@ -37,6 +37,7 @@ Some more important problems
 - [Alien Dictionary](./Graphs/Alien%20Dictionary.java)
 - [Maximum Number Of Invitations](./Graphs/Maximum%20Number%20Of%20Invitations%20to%20a%20Party.java)
 - [String Replacement Library](./Graphs/StringReplacementLibrary.java)
+- [Number of Islands II](./Disjoint%20Set%20Data%20Structures/Number%20of%20Islands%20II.java)
 
 ### DSU complexity analysis
 
@@ -140,6 +141,7 @@ Refer solved problems [here](./TreeMap/)
 Some important problems
 
 - [Find triplets](./TreeMap/Find%20triplets.java)
+- [My Calendar I](./TreeMap/My%20Calendar%201.java)
 - [Amount of new area painted each day](./TreeMap/2158.%20Amount%20of%20New%20Area%20Painted%20Each%20Day.java)
 
 ## Rate limiting
