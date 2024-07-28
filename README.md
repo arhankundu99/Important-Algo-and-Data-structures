@@ -144,6 +144,14 @@ Some important problems
 - [My Calendar I](./TreeMap/My%20Calendar%201.java)
 - [Amount of new area painted each day](./TreeMap/2158.%20Amount%20of%20New%20Area%20Painted%20Each%20Day.java)
 
+## Binary tree
+
+Refer solved problems [here](./Trees/)
+
+Some important problems:
+
+- [Binary tree cameras](./Trees/Binary%20Tree%20Cameras%20(VVIP).java)
+
 ## Rate limiting
 
 Refer these posts
