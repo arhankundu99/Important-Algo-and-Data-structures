@@ -134,6 +134,7 @@ Some important problems
 
 - [Find Selected Directories](./Tries/Find%20Selected%20Directories.java)
 
+- [Byte sequence not in substring](./Tries/Byte%20sequence%20not%20in%20substring.java)
 ## TreeMap / TreeSet
 
 Refer solved problems [here](./TreeMap/) 
@@ -151,6 +152,14 @@ Refer solved problems [here](./Trees/)
 Some important problems:
 
 - [Binary tree cameras](./Trees/Binary%20Tree%20Cameras%20(VVIP).java)
+
+## Dynamic Programming
+
+Refer solved problems [here](./Dynamic%20Programming/) 
+
+Some important problems:
+
+- [Reverse knapsack](./Dynamic%20Programming/Reverse%20Knapsack.java)
 
 ## Rate limiting
 
