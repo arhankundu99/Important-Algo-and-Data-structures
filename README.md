@@ -38,6 +38,10 @@ Some more important problems
 - [Maximum Number Of Invitations](./Graphs/Maximum%20Number%20Of%20Invitations%20to%20a%20Party.java)
 - [String Replacement Library](./Graphs/StringReplacementLibrary.java)
 - [Number of Islands II](./Disjoint%20Set%20Data%20Structures/Number%20of%20Islands%20II.java)
+- [Maximum Minimum Path](./Graphs/Shortest%20Path%20Algorithms/1102%20-%20Path%20With%20Maximum%20Minimum%20Value.java)
+- [Path with Maximum Probability](./Graphs/Shortest%20Path%20Algorithms/1514.%20Path%20with%20Maximum%20Probability.java)
+
+Notice the use of max heap in `Maximum Minimum Path` and `Path with Maximum Probability`.
 
 ### DSU complexity analysis
 
