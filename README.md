@@ -79,6 +79,11 @@ Some important problems
 - [Non overlapping intervals](https://leetcode.com/problems/non-overlapping-intervals/description/) (Sort by end time)
 - [Remove covered intervals](https://leetcode.com/problems/remove-covered-intervals/) (Sort by start time and then by end time in descending order)
 
+### Sort by end time problems
+- [Remove covered intervals](https://leetcode.com/problems/remove-covered-intervals/) (Sort by start time and then by end time in descending order)
+- [Minimum Number of Arrows to Burst Balloons](./Line%20Sweep/452.%20Minimum%20Number%20of%20Arrows%20to%20Burst%20Balloons.java)
+- [Maximum Length of Pair Chain](./Line%20Sweep/646.%20Maximum%20Length%20of%20Pair%20Chain.java)
+
 ## Game theory
 
 Solve problems by keeping the state of the current player. (And we can also remove the current player state if we see that it is not used in the recursive function)
@@ -120,6 +125,7 @@ Some important problems
 - [Time for turn](./Priority%20Queue/Time%20for%20turn.java)
 - [Single threaded CPU](./Priority%20Queue/1834.%20Single-Threaded%20CPU.java)
 - [Median in data stream](./Priority%20Queue/295.%20Find%20Median%20from%20Data%20Stream.java)
+-[Maximum Number of Events That Can Be Attended](https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/description/)
 
 ## Segment tree
 
