@@ -165,6 +165,22 @@ Some important problems:
 
 - [Reverse knapsack](./Dynamic%20Programming/Reverse%20Knapsack.java)
 
+## Stacks
+Refer solved problems [here](./Stacks%20and%20Queues/)
+
+Some important problems:
+
+- [Next Greater Element I](./Stacks%20and%20Queues/Next%20Greater%20Element%201.java)
+
+- [Next Greater Element II](./Stacks%20and%20Queues/Next%20Greater%20Element%20II.java)
+
+## Inplement data structures
+Refer solved problems [here](./Implement%20DS%20using%20other%20DS/)
+
+Some important problems:
+
+- [Insert Delete GetRandom O(1)](./Implement%20DS%20using%20other%20DS/Insert%20Delete%20GetRandom%20O(1).java)
+
 ## Rate limiting
 
 Refer these posts
