@@ -25,6 +25,7 @@ Reference problems:
 5. [Find Indices of Ones](./Binary%20Search/FindIndicesOfOnes.java)
 6. [Find minimum in rotated array](./Binary%20Search/find%20minimum%20in%20a%20rotated%20search%20array.java)
 7. [Random Pick With Weight](./Binary%20Search/Random%20pick%20with%20weight(VVIP).java)
+8. [Number of triplets](./Binary%20Search/Number%20of%20triplets.java)
 
 ## Graphs
 Refer this post: https://leetcode.com/discuss/study-guide/1326900/graph-algorithms-problems-to-practice
@@ -42,6 +43,7 @@ Some more important problems
 - [Number of Islands II](./Disjoint%20Set%20Data%20Structures/Number%20of%20Islands%20II.java)
 - [Maximum Minimum Path](./Graphs/Shortest%20Path%20Algorithms/1102%20-%20Path%20With%20Maximum%20Minimum%20Value.java)
 - [Path with Maximum Probability](./Graphs/Shortest%20Path%20Algorithms/1514.%20Path%20with%20Maximum%20Probability.java)
+- [Critical connections in a network](./Graphs/1192.%20Critical%20Connections%20in%20a%20Network(VVIP).java)
 
 Notice the use of max heap in `Maximum Minimum Path` and `Path with Maximum Probability`.
 
@@ -149,8 +151,8 @@ Refer solved problems [here](./Tries/)
 Some important problems
 
 - [Find Selected Directories](./Tries/Find%20Selected%20Directories.java)
-
 - [Byte sequence not in substring](./Tries/Byte%20sequence%20not%20in%20substring.java)
+
 ## TreeMap / TreeSet
 
 Refer solved problems [here](./TreeMap/) 
@@ -183,7 +185,6 @@ Refer solved problems [here](./Stacks%20and%20Queues/)
 Some important problems:
 
 - [Next Greater Element I](./Stacks%20and%20Queues/Next%20Greater%20Element%201.java)
-
 - [Next Greater Element II](./Stacks%20and%20Queues/Next%20Greater%20Element%20II.java)
 
 ## Queue
@@ -195,6 +196,13 @@ Refer solved problems [here](./Implement%20DS%20using%20other%20DS/)
 Some important problems:
 
 - [Insert Delete GetRandom O(1)](./Implement%20DS%20using%20other%20DS/Insert%20Delete%20GetRandom%20O(1).java)
+
+## Math
+Refer solved problems [here](./Math/)
+
+Some important problems:
+
+- [Count of ones from 1 to n](./Math/CountNumberOfOnes.java)
 
 ## Rate limiting
 
