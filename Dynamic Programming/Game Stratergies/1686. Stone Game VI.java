@@ -19,6 +19,12 @@
 // The difference will be a+b.
 // That's the reason why we need to sort based on a+b.
 // And Alice and Bob will take one most valued stone each turn.
+
+
+// Let me try to explain. The stones must be selected in some kind of order. So assume that the final order is as follows,
+// [a1, a2, a3, ...]
+// [b1, b2, b3, ...]
+// which means Alice picks a1, a3, and so on, and bob picks b2, b4, and so on. Since Alice wants the largest difference between her and Bob, then a1 - b2 >= a2 - b1, i.e., a1 + b1 >= a2 + b2. Therefore, we can sort by the sum of each pair.
 class Solution {
     public int stoneGameVI(int[] A, int[] B) {
         int n = A.length;

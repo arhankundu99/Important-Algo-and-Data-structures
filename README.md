@@ -23,6 +23,8 @@ Reference problems:
 3. [Length of LIS](https://leetcode.com/problems/longest-increasing-subsequence)
 4. [Russian Doll Envelopes](https://leetcode.com/problems/russian-doll-envelopes/)
 5. [Find Indices of Ones](./Binary%20Search/FindIndicesOfOnes.java)
+6. [Find minimum in rotated array](./Binary%20Search/find%20minimum%20in%20a%20rotated%20search%20array.java)
+7. [Random Pick With Weight](./Binary%20Search/Random%20pick%20with%20weight(VVIP).java)
 
 ## Graphs
 Refer this post: https://leetcode.com/discuss/study-guide/1326900/graph-algorithms-problems-to-practice
@@ -42,6 +44,10 @@ Some more important problems
 - [Path with Maximum Probability](./Graphs/Shortest%20Path%20Algorithms/1514.%20Path%20with%20Maximum%20Probability.java)
 
 Notice the use of max heap in `Maximum Minimum Path` and `Path with Maximum Probability`.
+
+### Bipartite matching
+- [Maximum number of accepted invitations](./Graphs/Maximum%20Number%20Of%20Invitations%20to%20a%20Party.java)
+- [Question To Volunteer Mapping](./Graphs/Question%20To%20Volunteer%20Mapping.java)
 
 ### DSU complexity analysis
 
@@ -179,6 +185,9 @@ Some important problems:
 - [Next Greater Element I](./Stacks%20and%20Queues/Next%20Greater%20Element%201.java)
 
 - [Next Greater Element II](./Stacks%20and%20Queues/Next%20Greater%20Element%20II.java)
+
+## Queue
+[Valid Draw](./Stacks%20and%20Queues/Valid%20Draw.java)
 
 ## Inplement data structures
 Refer solved problems [here](./Implement%20DS%20using%20other%20DS/)
