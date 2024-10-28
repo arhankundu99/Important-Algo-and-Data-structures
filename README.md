@@ -84,11 +84,10 @@ Refer solved problems [here](./Line%20Sweep/)
 
 Some important problems
 - [On Call Rotation Schedule](./Line%20Sweep/OnCallRotationSchedule.java)
-- [Non overlapping intervals](https://leetcode.com/problems/non-overlapping-intervals/description/) (Sort by end time)
 - [Remove covered intervals](https://leetcode.com/problems/remove-covered-intervals/) (Sort by start time and then by end time in descending order)
 
 ### Sort by end time problems
-- [Remove covered intervals](https://leetcode.com/problems/remove-covered-intervals/) (Sort by start time and then by end time in descending order)
+- [Non overlapping intervals](https://leetcode.com/problems/non-overlapping-intervals/description/) (Sort by end time)
 - [Minimum Number of Arrows to Burst Balloons](./Line%20Sweep/452.%20Minimum%20Number%20of%20Arrows%20to%20Burst%20Balloons.java)
 - [Maximum Length of Pair Chain](./Line%20Sweep/646.%20Maximum%20Length%20of%20Pair%20Chain.java)
 
