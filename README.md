@@ -26,6 +26,7 @@ Reference problems:
 6. [Find minimum in rotated array](./Binary%20Search/find%20minimum%20in%20a%20rotated%20search%20array.java)
 7. [Random Pick With Weight](./Binary%20Search/Random%20pick%20with%20weight(VVIP).java)
 8. [Number of triplets](./Binary%20Search/Number%20of%20triplets.java)
+9. [Find the safest path in the grid](./Graphs/2812.%20Find%20the%20Safest%20Path%20in%20a%20Grid.java)
 
 ## Graphs
 Refer this post: https://leetcode.com/discuss/study-guide/1326900/graph-algorithms-problems-to-practice
@@ -44,6 +45,7 @@ Some more important problems
 - [Maximum Minimum Path](./Graphs/Shortest%20Path%20Algorithms/1102%20-%20Path%20With%20Maximum%20Minimum%20Value.java)
 - [Path with Maximum Probability](./Graphs/Shortest%20Path%20Algorithms/1514.%20Path%20with%20Maximum%20Probability.java)
 - [Critical connections in a network](./Graphs/1192.%20Critical%20Connections%20in%20a%20Network(VVIP).java)
+- [Find the safest path in the grid](./Graphs/2812.%20Find%20the%20Safest%20Path%20in%20a%20Grid.java)
 
 Notice the use of max heap in `Maximum Minimum Path` and `Path with Maximum Probability`.
 
