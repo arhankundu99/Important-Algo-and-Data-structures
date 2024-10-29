@@ -85,6 +85,7 @@ Refer solved problems [here](./Line%20Sweep/)
 Some important problems
 - [On Call Rotation Schedule](./Line%20Sweep/OnCallRotationSchedule.java)
 - [Remove covered intervals](https://leetcode.com/problems/remove-covered-intervals/) (Sort by start time and then by end time in descending order)
+- [Maximum number of overlap](./Line%20Sweep/Maximum%20number%20of%20overlap.java)
 
 ### Sort by end time problems
 - [Non overlapping intervals](https://leetcode.com/problems/non-overlapping-intervals/description/) (Sort by end time)
