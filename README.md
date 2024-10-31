@@ -135,7 +135,7 @@ Some important problems
 - [Time for turn](./Priority%20Queue/Time%20for%20turn.java)
 - [Single threaded CPU](./Priority%20Queue/1834.%20Single-Threaded%20CPU.java)
 - [Median in data stream](./Priority%20Queue/295.%20Find%20Median%20from%20Data%20Stream.java)
--[Maximum Number of Events That Can Be Attended](https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/description/)
+- [Maximum Number of Events That Can Be Attended](https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/description/)
 
 ## Segment tree
 
@@ -180,6 +180,8 @@ Refer solved problems [here](./Dynamic%20Programming/)
 Some important problems:
 
 - [Reverse knapsack](./Dynamic%20Programming/Reverse%20Knapsack.java)
+- [Number of Ways to Build Sturdy Brick Wall](./Dynamic%20Programming/2184.%20Number%20of%20Ways%20to%20Build%20Sturdy%20Brick%20Wall.java)
+- [LIS with LIS](./Dynamic%20Programming/LIS%20with%20LIS.java)
 
 ## Stacks
 Refer solved problems [here](./Stacks%20and%20Queues/)
