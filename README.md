@@ -94,6 +94,10 @@ Some important problems
 - [Minimum Number of Arrows to Burst Balloons](./Line%20Sweep/452.%20Minimum%20Number%20of%20Arrows%20to%20Burst%20Balloons.java)
 - [Maximum Length of Pair Chain](./Line%20Sweep/646.%20Maximum%20Length%20of%20Pair%20Chain.java)
 
+### Interval problems
+- [Insert interval](./Line%20Sweep/57.%20Insert%20Interval.java)
+- [Remove interval](./Line%20Sweep/1272.%20Remove%20Interval.java)
+
 ## Game theory
 
 Solve problems by keeping the state of the current player. (And we can also remove the current player state if we see that it is not used in the recursive function)
@@ -135,7 +139,9 @@ Some important problems
 - [Time for turn](./Priority%20Queue/Time%20for%20turn.java)
 - [Single threaded CPU](./Priority%20Queue/1834.%20Single-Threaded%20CPU.java)
 - [Median in data stream](./Priority%20Queue/295.%20Find%20Median%20from%20Data%20Stream.java)
-- [Maximum Number of Events That Can Be Attended](https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/description/)
+- [Maximum Number of Events That Can Be Attended](./Priority%20Queue/1353.%20Maximum%20Number%20of%20Events%20That%20Can%20Be%20Attended.java)
+
+`Single Threaded CPU` and `Maximum Number of Events that can be attended` are similar.
 
 ## Segment tree
 
@@ -207,6 +213,7 @@ Refer solved problems [here](./Math/)
 Some important problems:
 
 - [Count of ones from 1 to n](./Math/CountNumberOfOnes.java)
+- [Basic Calculator II](./Math/Basic%20Calculator%20II.java)
 
 ## Rate limiting
 
