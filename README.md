@@ -107,6 +107,7 @@ Refer:
 - [Divisor Game](./Dynamic%20Programming/Game%20Stratergies/1025.%20Divisor%20Game.java)
 - [Stone Game IV](./Dynamic%20Programming/Game%20Stratergies/1510.%20Stone%20Game%20IV.java)
 - [Babylon](./Dynamic%20Programming/Game%20Stratergies/Babylon.java)
+- [Candies Game](./Dynamic%20Programming/Game%20Stratergies/Candies%20Game.java)
 
 
 Solve problems by the `Difference of scores method`
