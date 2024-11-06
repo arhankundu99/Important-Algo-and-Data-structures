@@ -116,7 +116,7 @@ Refer:
 - [Predict the winner](./Dynamic%20Programming/Game%20Stratergies/486.%20Predict%20the%20Winner.java)
 - [Stone Game I](./Dynamic%20Programming/Game%20Stratergies/877.%20Stone%20Game.java)
 - [Stone Game II](./Dynamic%20Programming/Game%20Stratergies/1140.%20Stone%20Game%20II.java)
-- [Stone Game III](./Dynamic%20Programming/Game%20Stratergies/1406.%20Stone%20Game%20III.java)
+- [Stone Game III](./Dynamic%20Programming/Game%20Stratergies/1406.%20Stne%20Game%20III.java)
 - [Stone Game VII](./Dynamic%20Programming/Game%20Stratergies/1690.%20Stone%20Game%20VII.java)
 
 
@@ -189,6 +189,7 @@ Some important problems:
 - [Reverse knapsack](./Dynamic%20Programming/Reverse%20Knapsack.java)
 - [Number of Ways to Build Sturdy Brick Wall](./Dynamic%20Programming/2184.%20Number%20of%20Ways%20to%20Build%20Sturdy%20Brick%20Wall.java)
 - [LIS with LIS](./Dynamic%20Programming/LIS%20with%20LIS.java)
+- [Odd Even Jump](./Dynamic%20Programming/Jump%20Game%20Series/975.%20Odd%20Even%20Jump.java)
 
 ## Stacks
 Refer solved problems [here](./Stacks%20and%20Queues/)
@@ -215,6 +216,7 @@ Some important problems:
 
 - [Count of ones from 1 to n](./Math/CountNumberOfOnes.java)
 - [Basic Calculator II](./Math/Basic%20Calculator%20II.java)
+- [Reservoir Sampling](./Math/382.%20Reservoir%20Sampling.java)
 
 ## Rate limiting
 
