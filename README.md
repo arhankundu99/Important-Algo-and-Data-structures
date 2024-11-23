@@ -28,6 +28,7 @@ Reference problems:
 8. [Number of triplets](./Binary%20Search/Number%20of%20triplets.java)
 9. [Find the safest path in the grid](./Graphs/2812.%20Find%20the%20Safest%20Path%20in%20a%20Grid.java)
 10. [Prime Subtraction Operation](./Binary%20Search/2601.%20Prime%20Subtraction%20Operation.java)
+11. [Kth smallest element in row and column wise sorted matrix](./Binary%20Search/378.%20Kth%20Smallest%20Element%20in%20a%20Sorted%20Matrix.java)
 
 ## Graphs
 Refer this post: https://leetcode.com/discuss/study-guide/1326900/graph-algorithms-problems-to-practice
