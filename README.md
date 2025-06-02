@@ -192,6 +192,7 @@ Some important problems:
 - [Number of Ways to Build Sturdy Brick Wall](./Dynamic%20Programming/2184.%20Number%20of%20Ways%20to%20Build%20Sturdy%20Brick%20Wall.java)
 - [LIS with LIS](./Dynamic%20Programming/LIS%20with%20LIS.java)
 - [Odd Even Jump](./Dynamic%20Programming/Jump%20Game%20Series/975.%20Odd%20Even%20Jump.java)
+- [Candy](https://leetcode.com/problems/candy)
 
 ## Stacks
 Refer solved problems [here](./Stacks%20and%20Queues/)
