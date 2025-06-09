@@ -220,6 +220,7 @@ Some important problems:
 - [Count of ones from 1 to n](./Math/CountNumberOfOnes.java)
 - [Basic Calculator II](./Math/Basic%20Calculator%20II.java)
 - [Reservoir Sampling](./Math/382.%20Reservoir%20Sampling.java)
+- [Lexicographical Numbers](./Math/Lexicographical%20Numbers.java)
 
 ## Rate limiting
 
