@@ -221,6 +221,7 @@ Some important problems:
 - [Basic Calculator II](./Math/Basic%20Calculator%20II.java)
 - [Reservoir Sampling](./Math/382.%20Reservoir%20Sampling.java)
 - [Lexicographical Numbers](./Math/Lexicographical%20Numbers.java)
+- [Majority Element](./Math/Majority%20Element.java)
 
 ## Rate limiting
 
